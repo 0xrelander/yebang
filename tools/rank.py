@@ -131,6 +131,13 @@ def score(groups, kind):
     return out
 
 TITLE_JUNK = re.compile(r"\s*(?:[-–—|·:：]\s*)?(GitHub|on the App Store|App Store|TestFlight|Join the .* beta|在 App Store 上|TapTap|官网|首页|Home)\s*$", re.I)
+GENERIC_REPO = {"plugins", "plugin", "app", "apps", "web", "site", "tool", "tools", "demo", "main", "src", "project", "repo", "code", "test", "skills", "skill"}
+
+def quoted_name(t):
+    """帖子标题里「」『』引起来的 2–12 字，通常就是作品名。"""
+    m = re.search(r"[「『]([^」』]{2,12})[」』]", t or "")
+    return m.group(1).strip() if m else ""
+
 def alive(url, proxy):
     """返回 (活着吗, 页面标题)。401/403/405/429 算活着（有防护）。"""
     handlers = [urllib.request.ProxyHandler({"http": PROXY, "https": PROXY})] if (proxy and PROXY) else [urllib.request.ProxyHandler({})]
@@ -147,7 +154,10 @@ def alive(url, proxy):
     m = re.search(r"<title[^>]*>(.*?)</title>", body, flags=re.S | re.I)
     title = re.sub(r"\s+", " ", html_unescape(m.group(1))).strip() if m else ""
     g = re.match(r"GitHub - ([^:]+?)(?::.*)?$", title)
-    if g: title = g.group(1).strip()
+    if g:  # 「owner/repo」只留仓名；仓名太泛（plugins/app/tool…）时整个丢掉，让调用方退回帖子标题
+        owner_repo = g.group(1).strip()
+        repo = owner_repo.rsplit("/", 1)[-1]
+        title = "" if repo.lower() in GENERIC_REPO else repo
     title = re.sub(r"^[\u200e\u200f\s]*(?:App Store 上的|Mac App Store 上的|(?:iPhone|iPad|Mac)\s*版)\s*[“\"]?(.+?)[”\"]?\s*$", r"\1", title)
     title = re.split(r"\s+[-–—|·]\s+", title)[0].strip()
     title = TITLE_JUNK.sub("", title).strip().strip("“”\"'\u200e\u200f ")
@@ -160,8 +170,14 @@ def html_unescape(s):
 def clean_post_title(t):
     t = re.sub(r"^\s*[\[【（(][^\]】）)]{1,12}[\]】）)]\s*", "", t)
     t = re.sub(r"^(我|自己|顺手|最近|分享一?个?|做了一?个?|用\s*\S+\s*做了一?个?|开源了?一?个?|上线了?一?个?)+", "", t)
-    t = re.split(r"[，,。：:；;（(]|\s+-\s+|\s*[—–]\s*|想听听|求反馈|帮忙看看|欢迎", t)[0]
-    return t.strip()[:32] or t[:32]
+    parts = [p.strip() for p in re.split(r"[，,。：:；;（(]|\s+-\s+|\s*[—–]\s*|想听听|求反馈|帮忙看看|欢迎", t) if p.strip()]
+    first = parts[0] if parts else t
+    # 第一段只剩「小工具 / 网站 / 东西」这类泛词时，用第二段（通常是它干什么）当名字
+    if (len(first) < 3 or first in GENERIC_WORK) and len(parts) > 1:
+        first = parts[1]
+    return first[:32] or t[:32]
+
+GENERIC_WORK = {"小工具", "工具", "网站", "小网站", "东西", "小东西", "小玩意", "玩具", "小玩具", "项目", "小项目", "应用", "App", "app", "插件", "脚本", "小程序"}
 
 def main():
     date = sys.argv[1]; issue = int(sys.argv[2]); do_alive = "--no-alive" not in sys.argv
@@ -185,7 +201,8 @@ def main():
             it["alive"], it["checked"] = True, checked
             if it["source"].startswith("V2EX"):
                 post_title = it["name"]
-                it["name"] = title if (title and 2 <= len(title) <= 40 and not re.search(r"(404|not found|error|登录|login)", title, re.I)) else clean_post_title(post_title)
+                good_title = title if (title and 2 <= len(title) <= 40 and not re.search(r"(404|not found|error|登录|login)", title, re.I)) else ""
+                it["name"] = quoted_name(post_title) or good_title or clean_post_title(post_title)
                 it["desc"] = ("帖：" + post_title)[:90]
                 it["source_url"] = it["extra"].get("post") or it["url"]
         final_apps.append(it)
