@@ -494,6 +494,11 @@ def main():
     lib, weeks = load_library()
     lib_by_url = {it["url"]: it for it in lib}
     picks = load_picks()
+    # 编辑在精选里改过的行业 / 名字 / 介绍，同步回搜索库那条，首页筛选和精选卡片说的是同一个行业
+    for pk in picks:
+        for p in pk["picks"]:
+            if p["url"] in lib_by_url:
+                lib_by_url[p["url"]].update({k: p[k] for k in ("industry", "name", "desc") if p.get(k)})
     legacy = [json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob(os.path.join(DATA, "issues", "*.json")))]
     legacy = [i for i in legacy if int(i.get("issue", 0)) > 0]
     latest_picks = picks[-1] if picks else None
