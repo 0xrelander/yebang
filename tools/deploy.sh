@@ -8,11 +8,13 @@ MSG="${1:-update}"
 python3 build.py --poster
 git add -A
 git commit -qm "$MSG" || true
+git config http.postBuffer 524288000   # 每期 raw 数据几十 MB，默认 buffer 会被远端掐断
 if ! gh repo view "$OWNER/$REPO" >/dev/null 2>&1; then
-  gh repo create "$OWNER/$REPO" --public --source=. --remote=origin --push \
+  gh repo create "$OWNER/$REPO" --public --source=. --remote=origin \
     --description "野榜：野生好用的 AI 技能与应用，每周排一次。方法公开，数据可核。"
+fi
+git push -q -u origin HEAD:main
+if ! gh api "repos/$OWNER/$REPO/pages" >/dev/null 2>&1; then
   gh api -X POST "repos/$OWNER/$REPO/pages" -f 'source[branch]=main' -f 'source[path]=/docs' >/dev/null
-else
-  git push -q origin HEAD:main
 fi
 echo "pages: $(gh api repos/$OWNER/$REPO/pages --jq .html_url 2>/dev/null)"
