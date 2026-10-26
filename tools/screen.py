@@ -163,6 +163,8 @@ def lang_of(it, a):
 def pick_name(it, a):
     """GitHub 仓名多是 slug，页面标题更像作品名；标题太泛或太长就回退。"""
     t = (a.get("title") or "").strip()
+    head = re.split(r":\s|\s[|–—]\s", t)[0].strip()  # 「名字: 一句话」只留名字
+    if 2 <= len(head) <= 30 and len(head) < len(t): t = head
     bad = re.search(r"(404|not found|error|just a moment|attention required|login|sign in|登录|vercel|netlify|streamlit$|gradio$|^\(|index|home$|首页|untitled|react app|vite \+|create next app|document$)", t, re.I)
     if t and 2 <= len(t) <= 40 and not bad: return t
     return it["name"]
@@ -188,7 +190,12 @@ def main():
     limit = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else 0
     stats, by_url = {}, {}
     for p in sorted(glob.glob(os.path.join(DATA, "found", f"*-{date}.json"))):
-        d = json.load(open(p, encoding="utf-8"))
+        for t in range(3):  # 登记处脚本可能正在并行写这个文件，读到半截就等一下再读
+            try:
+                d = json.load(open(p, encoding="utf-8")); break
+            except json.JSONDecodeError:
+                time.sleep(2); d = {"items": []}
+        print(f"  {os.path.basename(p)}: {len(d['items'])} 条", file=sys.stderr)
         for it in d["items"]:
             st = stats.setdefault(it["src_name"], {"候选": 0, "网址不算网站": 0, "非个人或大厂": 0, "中转代理": 0, "打不开": 0, "没有可用界面": 0, "收录": 0})
             st["候选"] += 1
@@ -204,26 +211,28 @@ def main():
                 it["also"] = []; by_url[u] = it
     items = list(by_url.values())
     # Hugging Face 作者是不是个人，查一次（有缓存）
-    hf_items = [it for it in items if it["src"] == "hf"]
-    if hf_items:
-        print(f"HF 作者类型查询 {len({it['author'] for it in hf_items})} 人…", file=sys.stderr)
-        with ThreadPoolExecutor(max_workers=8) as ex:
-            list(ex.map(lambda it: hf_is_user(it["author"]), hf_items))
-        keep = []
-        for it in hf_items:
-            r = hf_is_user(it["author"])
-            it["author_type"] = "individual" if r else ("organization" if r is False else "unknown")
-        for it in list(items):
-            if it["src"] == "hf" and it["author_type"] == "organization":
-                stats[it["src_name"]]["非个人或大厂"] += 1; items.remove(it)
     if limit: items = items[:limit]
-    print(f"去重去杂后 {len(items)} 条，开始逐条打开（{threads} 线程）…", file=sys.stderr)
+    # 同一期里已经打开过的网址不再开第二次：本期检测缓存 + 上一轮已收录的条目（登记处补拉后重筛只查新增）
+    cache_p = os.path.join(DATA, "screened", f"alive-cache-{date}.json")
+    acache = json.load(open(cache_p, encoding="utf-8")) if os.path.exists(cache_p) else {}
+    prev_p = os.path.join(DATA, "screened", f"{date}.json")
+    if os.path.exists(prev_p):
+        for x in json.load(open(prev_p, encoding="utf-8")).get("items", []):
+            acache.setdefault(x["url"], {"ok": True, "status": 200, "final_url": x.get("final_url") or x["url"], "title": x.get("title", ""), "meta": x.get("meta", ""),
+                                         "has_ui": x.get("has_ui", True), "login_wall": False, "body_len": 0, "via": "cache", "lang_hint": "zh" if x.get("lang") == "zh" else ""})
+    todo = [it for it in items if it["url"] not in acache]
+    print(f"去重去杂后 {len(items)} 条，{len(items) - len(todo)} 条有缓存，开始逐条打开 {len(todo)} 条（{threads} 线程）…", file=sys.stderr)
     checked = datetime.date.today().strftime("%m-%d")
     out, t0 = [], time.time()
     with ThreadPoolExecutor(max_workers=threads) as ex:
-        futs = {ex.submit(alive, it["url"]): it for it in items}
-        for i, f in enumerate(as_completed(futs), 1):
-            it = futs[f]; a = f.result()
+        futs = {ex.submit(alive, it["url"]): it for it in todo}
+        done = [(it, acache[it["url"]]) for it in items if it["url"] in acache]
+        def gen():
+            for it, a in done: yield it, a
+            for f in as_completed(futs):
+                a = f.result(); acache[futs[f]["url"]] = a; yield futs[f], a
+        for i, (it, a) in enumerate(gen(), 1):
+            if i % 500 == 0: json.dump(acache, open(cache_p, "w", encoding="utf-8"), ensure_ascii=False)
             st = stats[it["src_name"]]
             if not a["ok"]:
                 st["打不开"] += 1; continue
@@ -246,6 +255,25 @@ def main():
                         "desc": it.get("desc") or a["meta"], "title": a["title"], "meta": a["meta"], "lang": lang, "industry": ind, "has_ui": a["has_ui"], "traction": tr,
                         "signals": it.get("signals") or {}, "created_at": it.get("created_at"), "found_at": it.get("found_at"), "checked": checked, "score": score})
             if i % 100 == 0: print(f"  {i}/{len(items)} 已检 {time.time()-t0:.0f}s 收录 {len(out)}", file=sys.stderr)
+    json.dump(acache, open(cache_p, "w", encoding="utf-8"), ensure_ascii=False)
+    # Hugging Face 作者是不是个人：只查活着且有界面的那些（没在跑的 Space 占大头，不必为它们问镜像）；查过的记在盘上
+    hf_out = [x for x in out if x["src"] == "hf"]
+    hf_cache_p = os.path.join(DATA, "screened", "hf-authors.json")
+    if hf_out:
+        if os.path.exists(hf_cache_p):
+            for k, v in json.load(open(hf_cache_p, encoding="utf-8")).items():
+                if v is not None: hf_is_user.__defaults__[0][k] = v
+        authors = {x["author"] for x in hf_out}
+        print(f"HF 作者类型查询 {len(authors)} 人（{len([a for a in authors if a in hf_is_user.__defaults__[0]])} 人有缓存）…", file=sys.stderr)
+        with ThreadPoolExecutor(max_workers=3) as ex:  # 镜像并发高了回 429，查不出的留给 tools/hf_authors.py 慢慢补
+            list(ex.map(lambda a: (hf_is_user(a), time.sleep(0.3)), authors))
+        for x in hf_out:
+            r = hf_is_user(x["author"])
+            x["author_type"] = "individual" if r else ("organization" if r is False else "unknown")
+            if r is False:
+                stats[x["src_name"]]["非个人或大厂"] += 1; stats[x["src_name"]]["收录"] -= 1; out.remove(x)
+        json.dump({k: v for k, v in hf_is_user.__defaults__[0].items() if v is not None}, open(hf_cache_p, "w", encoding="utf-8"), ensure_ascii=False)
+        print(f"  HF 收录 {len([x for x in out if x['src'] == 'hf'])}，其中作者待查 {len([x for x in out if x['src'] == 'hf' and x['author_type'] == 'unknown'])}", file=sys.stderr)
     out.sort(key=lambda x: (-x["score"], x["industry"], -(x["signals"].get("stars") or x["signals"].get("points") or x["signals"].get("likes") or 0)))
     os.makedirs(os.path.join(DATA, "screened"), exist_ok=True)
     p = os.path.join(DATA, "screened", f"{date}.json")

@@ -1,11 +1,11 @@
 {
  "issue": 2,
  "date": "2026-10-26",
- "title": "一周 9,349 个新出生的网址，2,948 个活着能用，这 27 个有意思",
- "note": "**本期起换了方法。** 创刊号从六个技能市场拉下载量按热度排，被读者（也是出品人）否了：热度把陪聊壳排第一，把真解决一个行业问题的小东西埋掉。从这期起，野榜不排热度：去 GitHub 新仓、Show HN、Hugging Face Spaces、V2EX 这些「出生登记处」拉最近 7 天新出生的网址，机器过四道门（是独立网站 / 作者是个人 / 当天打得开 / 有可操作界面），过门的全部进搜索库；再从里面挑有意思的，六个维度打分、一句为什么。分是编辑打的，每周公开，欢迎来戳。\n\n**本周一个现象：** 麦当劳中国开放了点餐 MCP 接口并办了程序员创意大赛，一周之内冒出四十多个个人做的麦当劳比价、配餐、考古、点餐人格测试站。一家公司把接口开出来，野生开发者一周就长出一片小生态——这正是野榜想盯着看的东西。本期从里面挑了三个做法最特别的。",
+ "title": "一周 28,579 个新出生的网址，7,567 个活着能用，这 27 个有意思",
+ "note": "**本期起换了方法。** 创刊号从六个技能市场拉下载量按热度排，被读者（也是出品人）否了：热度把陪聊壳排第一，把真解决一个行业问题的小东西埋掉。从这期起，野榜不排热度：去 GitHub 新仓、Show HN、Hugging Face Spaces、V2EX、dev.to、掘金和 BetaList 等发布台这些「出生登记处」拉最近 7 天新出生的网址，机器过四道门（是独立网站 / 作者是个人 / 当天打得开 / 有可操作界面），过门的全部进搜索库；再从里面挑有意思的，六个维度打分、一句为什么。分是编辑打的，每周公开，欢迎来戳。\n\n**本周一个现象：** 麦当劳中国开放了点餐 MCP 接口并办了程序员创意大赛，一周之内冒出四十多个个人做的麦当劳比价、配餐、考古、点餐人格测试站。一家公司把接口开出来，野生开发者一周就长出一片小生态——这正是野榜想盯着看的东西。本期从里面挑了三个做法最特别的。",
  "poster_title": "这周新出生的野生 AI 网站",
- "poster_sub": "一周 9,349 个新网址，2,948 个活着能用 · 个人做的、搜索引擎还看不见的 · 挑了 27 个",
- "poster_note": "全部 2,948 个可搜；是你做的，来认领。",
+ "poster_sub": "一周 28,579 个新网址，7,567 个活着能用 · 个人做的、搜索引擎还看不见的 · 挑了 27 个",
+ "poster_note": "全部 7,567 个可搜；是你做的，来认领。",
  "picks": [
   {
    "name": "薪有数",
@@ -93,43 +93,10 @@
    "dim_total": 10
   },
   {
-   "name": "订阅账本 Calends",
    "url": "https://calends.date",
-   "final_url": "",
-   "source_url": "https://github.com/imetn/calends",
-   "src": "github",
-   "src_name": "GitHub 新仓",
-   "also": [],
-   "author": "imetn",
-   "author_url": "https://github.com/imetn",
-   "author_type": "individual",
-   "desc": "开源的个人订阅记账：多币种与历史汇率、合租分摊、代付、钱包余额能撑多久、日历与提醒；粘贴收据就能记。",
-   "title": "订阅账本 Calends",
-   "meta": "Calends（订阅账本）是开源的个人订阅记账工具：多币种与历史汇率、合租分摊、代付、钱包余额续航、日历与提醒；内置 AI 助手，粘贴收据就能记账，也能接入 Claude、Codex 等 AI。部署在 Cloudflare 或 Docker。",
-   "lang": "zh",
    "industry": "金融投研",
-   "has_ui": true,
-   "traction": true,
-   "signals": {
-    "stars": 26,
-    "forks": 3,
-    "topics": [
-     "cloudflare-workers",
-     "docker",
-     "mcp",
-     "multi-currency",
-     "personal-finance",
-     "react",
-     "self-hosted",
-     "subscription-tracker"
-    ],
-    "language": "TypeScript"
-   },
-   "created_at": "2026-10-21",
-   "found_at": "2026-10-26",
-   "checked": "10-26",
-   "score": 90,
-   "week": "2026-10-26",
+   "name": "订阅账本 Calends",
+   "desc": "开源的个人订阅记账：多币种与历史汇率、合租分摊、代付、钱包余额能撑多久、日历与提醒；粘贴收据就能记。",
    "why": "只盯一件事：你每个月被多少订阅自动扣钱。合租分摊和「余额还能续几个月」这两个细节，是真有人在用才会想到的。",
    "dims": {
     "usable": 2,
@@ -714,8 +681,8 @@
    "has_ui": true,
    "traction": true,
    "signals": {
-    "stars": 45,
-    "forks": 23,
+    "stars": 46,
+    "forks": 25,
     "topics": [],
     "language": "Python"
    },
@@ -830,7 +797,7 @@
    "has_ui": true,
    "traction": true,
    "signals": {
-    "stars": 266,
+    "stars": 267,
     "forks": 20,
     "topics": [
      "ai-agent",
@@ -878,7 +845,7 @@
    "has_ui": true,
    "traction": true,
    "signals": {
-    "stars": 130,
+    "stars": 131,
     "forks": 5,
     "topics": [],
     "language": "TypeScript"
@@ -1055,10 +1022,10 @@
     "stars": 0,
     "forks": 0,
     "topics": [
-     "ai",
-     "cooperative",
      "game",
-     "html5-game"
+     "html5-game",
+     "cooperative",
+     "ai"
     ],
     "language": "HTML"
    },
@@ -1150,11 +1117,11 @@
     "forks": 0,
     "topics": [
      "industrial-camera",
-     "lens-selection",
      "lighting",
      "machine-vision",
      "static-site",
-     "vision-system"
+     "vision-system",
+     "lens-selection"
     ],
     "language": "JavaScript"
    },

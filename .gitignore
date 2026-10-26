@@ -9,3 +9,7 @@ data/issues/2026-00-00.json
 !/README.md
 # 分发素材草稿（小红书文案等）不外发
 /小红书/
+# 筛选阶段的本地缓存（打开过的网址、查过的 HF 作者）和运行日志
+data/screened/alive-cache-*.json
+data/screened/hf-authors.json
+data/log/

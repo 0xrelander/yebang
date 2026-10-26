@@ -14,7 +14,8 @@ SITE = os.path.join(ROOT, "docs")
 site = json.load(open(os.path.join(DATA, "site.json"), encoding="utf-8"))
 ACCENT = site.get("accent", "#FF4D00")
 DIMS = [("usable", "真能用"), ("specific", "解决具体环节"), ("novel", "第一次见"), ("wild", "野生"), ("used", "有真人用"), ("verifiable", "可核可认领")]
-SRC_SHORT = {"GitHub 新仓": "GitHub", "Show HN": "Show HN", "Hugging Face Spaces": "HF Spaces", "V2EX 分享创造": "V2EX", "投稿": "投稿"}
+SRC_SHORT = {"GitHub 新仓": "GitHub", "Show HN": "Show HN", "Hugging Face Spaces": "HF Spaces", "V2EX 分享创造": "V2EX", "投稿": "投稿",
+             "dev.to #showdev": "dev.to", "掘金": "掘金", "BetaList": "BetaList", "Uneed": "Uneed", "Indie Hackers": "Indie Hackers", "Microlaunch": "Microlaunch"}
 
 def esc(s):
     return html.escape(str(s if s is not None else ""), quote=True)
@@ -222,6 +223,7 @@ def load_library():
     """所有周的 screened 合并成一个搜索库；同一网址只留最近一次记录。"""
     lib, weeks = {}, []
     for f in sorted(glob.glob(os.path.join(DATA, "screened", "*.json"))):
+        if not re.match(r"\d{4}-\d{2}-\d{2}\.json$", os.path.basename(f)): continue  # 同目录里还有筛选缓存文件
         d = json.load(open(f, encoding="utf-8"))
         weeks.append(d)
         for it in d["items"]:

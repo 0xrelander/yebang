@@ -8,13 +8,18 @@
 
 | 登记处 | 拉什么 | 怎么判「个人」 |
 |---|---|---|
-| GitHub 新仓 | 最近 7 天新建、带 AI 相关主题词或描述、填了 homepage 的仓库 | 仓库属主类型是 User，不是 Organization |
+| GitHub 新仓 | 最近 7 天新建、带 AI 相关主题词或名字描述、填了 homepage、不是 fork 的仓库。搜索接口一次最多给 1000 条，而光「AI」一词一天就有一万八千多个新仓，所以按创建时刻切段拉到不漏 | 仓库属主类型是 User，不是 Organization |
 | Show HN | 最近 7 天带链接的 Show HN 帖 | 发帖人本来就是个人 |
-| Hugging Face Spaces | 最新建立的 Space（每周只探最新 3000 个） | 作者在 /api/users 查得到，查不到的是机构 |
+| Hugging Face Spaces | 最近 7 天新建的全部 Space | 作者在 /api/users 查得到，查不到的是机构 |
 | V2EX 分享创造 | 最近 30 天带 AI 关键词、带站外链接的帖 | 发帖人本来就是个人 |
+| dev.to #showdev | 最近 7 天打了 showdev 标签、正文带作品链接的帖 | 发帖人不挂机构账号 |
+| 掘金 | 最近 7 天搜「我做了一个 / 上线了 / 独立开发」等 10 组词命中、正文带作品链接的帖 | 发帖人本来就是个人 |
+| BetaList / Uneed / Indie Hackers / Microlaunch | 这四个海外发布台最新登记的网站 | 台子不标作者身份，这道门只剩大厂名单能拦 |
 | 投稿 | 任何人投来的网站 | 投稿人自述 |
 
-**还没接上的登记处**（接上就加）：证书透明日志（新域名签证书的记录，接口不稳）、Lovable / Bolt / v0 / Replit 的作品墙（没有公开接口）、Reddit r/SideProject（拒绝机器访问）、即刻 / 少数派 / 小红书「我做了」帖、面包多 / 爱发电创作者页、国内「秒哒」「扣子编程」。
+**还没接上的登记处**（接上就加）：Product Hunt（只给 50 条 feed，且不给网站地址）、Reddit r/SideProject、theresanaiforthat / toolify（都拒绝机器访问）、Linux.do（国内外都连不上）、Tinylaunch / Peerlist（页面靠脚本渲染）、证书透明日志（新域名签证书的记录，接口不稳）、Lovable / Bolt / v0 / Replit 的作品墙（没有公开接口）、即刻 / 少数派 / 小红书「我做了」帖、面包多 / 爱发电创作者页、国内「秒哒」「扣子编程」。
+
+**这套登记处天然看不见的**：没开源、没发帖、直接部署到 vercel / lovable 之类平台的闭源站。要找它们只能靠搜索引擎按新站域名扫，还没做。
 
 ## 二、怎么筛：四道门，全是机器跑
 

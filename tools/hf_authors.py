@@ -38,5 +38,13 @@ st = d["stats"].get("Hugging Face Spaces")
 if st:
     st["非个人或大厂"] += dropped; st["收录"] -= dropped
 json.dump(d, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+# 查到的也记进 screen.py 的作者缓存，重筛时不再问镜像
+cp = os.path.join(ROOT, "data", "screened", "hf-authors.json")
+cache = json.load(open(cp, encoding="utf-8")) if os.path.exists(cp) else {}
+for a, v in res.items():
+    if v != "unknown": cache[a] = (v == "individual")
+for it in kept:
+    if it["src"] == "hf" and it.get("author_type") in ("individual", "organization"): cache.setdefault(it["author"], it["author_type"] == "individual")
+json.dump(cache, open(cp, "w", encoding="utf-8"), ensure_ascii=False)
 import collections
 print("结果：", dict(collections.Counter(res.values())), "拿掉机构", dropped)
