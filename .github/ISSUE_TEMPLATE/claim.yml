@@ -1,0 +1,29 @@
+name: 认领 / 纠错
+description: 榜上的东西是我做的，或者榜上的信息有错
+title: "[认领/纠错] "
+labels: ["认领纠错"]
+body:
+  - type: input
+    id: item
+    attributes:
+      label: 哪一期、哪一条
+      placeholder: 例：第 1 期 技能榜 第 3 名 xxx
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      options:
+        - 认领：这是我做的，补充 / 修改署名与介绍
+        - 纠错：数据或信息有误
+        - 下榜：请把它从榜上拿掉（说明原因）
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 说明
+      placeholder: 认领请给能证明作者身份的链接；纠错请给正确数据的来源
+    validations:
+      required: true

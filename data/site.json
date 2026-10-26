@@ -1,0 +1,13 @@
+{
+  "name": "野榜",
+  "name_en": "yebang",
+  "tagline": "野生好用的 AI 技能与应用，每周排一次",
+  "intro": "大厂的产品不缺人看。野榜只排两种东西：独立开发者做的 agent 技能，和普通人做出来、搜不到但好用的 AI 应用。方法公开，数据可核，被排到的人可以来认领。",
+  "byline": "出品：野榜",
+  "site_url": "https://0xrelander.github.io/yebang/",
+  "repo_url": "https://github.com/0xrelander/yebang",
+  "submit_url": "https://github.com/0xrelander/yebang/issues/new?template=submit.yml&title=%5B%E6%8A%95%E7%A8%BF%5D+",
+  "claim_url": "https://github.com/0xrelander/yebang/issues/new?template=claim.yml&title=%5B%E8%AE%A4%E9%A2%86%2F%E7%BA%A0%E9%94%99%5D+",
+  "cadence": "每周一发布，数据截至发布前一天 24:00（北京时间）",
+  "accent": "#FF4D00"
+}

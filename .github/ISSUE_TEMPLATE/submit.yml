@@ -1,0 +1,56 @@
+name: 投稿
+description: 我做了一个 AI 技能 / 应用，想上野榜
+title: "[投稿] "
+labels: ["投稿"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 名字
+      placeholder: 你的技能 / 应用叫什么
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 链接
+      placeholder: 能直接打开或安装的地址（网站 / GitHub / 技能市场页）
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      options:
+        - 技能 / 插件（给 agent 用的）
+        - 应用 / 网站（给人用的）
+    validations:
+      required: true
+  - type: input
+    id: desc
+    attributes:
+      label: 一句话说清它帮谁解决什么
+      placeholder: 不超过 40 字
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: 作者署名（会公开）
+      placeholder: 名字 / ID / 公众号名，随你
+    validations:
+      required: true
+  - type: textarea
+    id: numbers
+    attributes:
+      label: 可核的公开数据（可选）
+      placeholder: 安装量 / star 数 / 用户数 / 公开帖子链接，有就填，我们会去核
+  - type: checkboxes
+    id: ok
+    attributes:
+      label: 确认
+      options:
+        - label: 这是我自己做的，或者我获得了作者授权来投稿
+          required: true
+        - label: 我同意野榜按公开方法排名，排不上也不保证上榜
+          required: true
