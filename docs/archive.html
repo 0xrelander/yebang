@@ -2,7 +2,7 @@
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>野榜 · 往期</title>
-<meta name="description" content="野生好用的 AI 技能与应用，每周排一次">
+<meta name="description" content="找那些搜不到的野生 AI 网站">
 <style>
 :root{--accent:#FF4D00;--ink:#111;--muted:#6b6b6b;--line:#e6e6e6;--bg:#fff;--soft:#f6f6f4}
 *{box-sizing:border-box}
@@ -17,35 +17,66 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;h
 .logo i{display:inline-block;width:14px;height:14px;background:var(--accent);border-radius:2px;transform:rotate(45deg)}
 nav a{margin-left:22px;font-size:15px;color:var(--muted)}
 nav a.on{color:var(--ink);font-weight:600}
-.hero{padding:48px 0 28px}
+.hero{padding:44px 0 20px}
 .hero .issue{color:var(--accent);font-weight:800;letter-spacing:.08em;font-size:14px;text-transform:uppercase}
 .hero h1{font-size:44px;line-height:1.15;margin:8px 0 14px;font-weight:900;letter-spacing:-.01em}
 .hero p{color:var(--muted);max-width:720px;margin:0;font-size:17px}
 .meta{display:flex;flex-wrap:wrap;gap:14px 28px;color:var(--muted);font-size:14px;margin-top:18px}
 .meta b{color:var(--ink);font-weight:600}
-section.board{margin:36px 0 56px}
+.search{margin:22px 0 10px}
+.search input{width:100%;font-size:20px;padding:14px 18px;border:2px solid var(--ink);border-radius:8px;outline:none;font-family:inherit;background:#fff}
+.search input:focus{border-color:var(--accent)}
+.facets{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.facets button{font:inherit;font-size:14px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;cursor:pointer;color:#333}
+.facets button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.facets button small{color:#999;margin-left:4px}
+.facets button.on small{color:#ccc}
+.count{color:var(--muted);font-size:14px;margin:6px 0 18px}
+section.board{margin:30px 0 48px}
 section.board h2{font-size:26px;margin:0 0 6px;display:flex;align-items:baseline;gap:12px}
 section.board h2 small{font-size:14px;color:var(--muted);font-weight:500}
 section.board .sub{color:var(--muted);margin:0 0 18px;font-size:15px}
-ol.rank{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+h3.ind{font-size:18px;margin:26px 0 8px;display:flex;align-items:center;gap:10px}
+h3.ind:before{content:"";display:inline-block;width:10px;height:10px;background:var(--accent);transform:rotate(45deg)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:#fff}
+.card .name{font-size:18px;font-weight:800;line-height:1.3}
+.card .by{color:var(--muted);font-size:13px;margin-top:3px}
+.card .by a{color:var(--ink)}
+.card .desc{font-size:14.5px;color:#333;margin-top:8px}
+.card .why{margin-top:10px;padding:10px 12px;background:var(--soft);border-left:3px solid var(--accent);font-size:14.5px;border-radius:3px}
+.card .why b{color:var(--accent);font-weight:800;margin-right:4px}
+.dims{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:10px;font-size:12px;color:var(--muted)}
+.dims span i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#ddd;margin-left:3px;vertical-align:middle}
+.dims span i.on{background:var(--accent)}
+ol.rank,ul.lib{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
 ol.rank li{display:grid;grid-template-columns:56px 1fr 150px;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+ul.lib li{display:grid;grid-template-columns:1fr 120px;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);align-items:start}
+ul.lib li.hide{display:none}
 ol.rank .no{font-size:30px;font-weight:900;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
 ol.rank li:nth-child(-n+3) .no{color:var(--accent)}
-ol.rank .name{font-size:18px;font-weight:700;line-height:1.3}
-ol.rank .name a:hover{text-decoration:underline}
-ol.rank .by{color:var(--muted);font-size:14px;margin-top:2px}
-ol.rank .by a{color:var(--ink)}
-ol.rank .desc{margin-top:6px;font-size:15px;color:#333}
+.name{font-size:18px;font-weight:700;line-height:1.3}
+ul.lib .name{font-size:16.5px}
+.by{color:var(--muted);font-size:14px;margin-top:2px}
+.by a{color:var(--ink)}
+.desc{margin-top:6px;font-size:15px;color:#333}
+ul.lib .desc{font-size:14px;margin-top:3px}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .chip{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--muted);background:var(--soft)}
 .chip.ok{border-color:#bfe3c6;color:#1f7a37;background:#eef9f0}
 .chip.src{border-color:#f3cdbb;color:#b0400c;background:#fff3ec}
+.chip.ind{border-color:#ddd;color:#333;background:#fff}
 .num{text-align:right}
 .num .v{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.1}
 .num .l{font-size:12px;color:var(--muted);margin-top:3px}
 .num .d{font-size:13px;color:#1f7a37;margin-top:3px;font-weight:600}
-.num .d.neg{color:#b0400c}
+.side{text-align:right;font-size:12px;color:var(--muted);line-height:1.5}
+.side b{color:var(--ink);font-weight:700;font-size:13px}
 .note{background:var(--soft);border-left:4px solid var(--accent);padding:14px 18px;border-radius:4px;color:#333;font-size:15px;margin:24px 0}
+.stats{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}
+.stats td{border-bottom:1px solid var(--line);padding:7px 10px;vertical-align:top;text-align:right;font-variant-numeric:tabular-nums}
+.stats td:first-child{text-align:left}
+.stats tr:first-child td{font-weight:700;border-bottom:2px solid var(--ink)}
 footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
 footer a{color:var(--ink)}
@@ -65,21 +96,25 @@ ul.archive li{padding:14px 0;border-bottom:1px solid var(--line);display:flex;ju
 .cta:hover{text-decoration:none;opacity:.9}
 @media (max-width:640px){
  .hero h1{font-size:32px}
+ .cards{grid-template-columns:1fr}
  ol.rank li{grid-template-columns:40px 1fr;gap:12px}
+ ul.lib li{grid-template-columns:1fr}
+ .side{text-align:left}
  ol.rank .no{font-size:24px}
  .num{grid-column:2;text-align:left;display:flex;gap:10px;align-items:baseline}
  .num .l{margin:0}
- nav a{margin-left:14px;font-size:14px}
+ nav a{margin-left:12px;font-size:13px}
+ .logo{font-size:22px}
 }
 </style></head>
 <body>
 <header class="top"><div class="wrap">
  <a class="logo" href="index.html"><i></i>野榜</a>
- <nav><a href="index.html" class="">本期</a><a href="archive.html" class="on">往期</a><a href="method.html" class="">方法</a><a href="submit.html" class="">投稿 / 认领</a></nav>
+ <nav><a href="index.html" class="">搜索</a><a href="weekly.html" class="">本周精选</a><a href="archive.html" class="on">往期</a><a href="method.html" class="">方法</a><a href="submit.html" class="">投稿 / 认领</a></nav>
 </div></header>
-<div class="wrap"><article><h2>往期</h2><ul class="archive"><li><a href="issues/2026-10-26.html">第 1 期 · 2026-10-26 · 创刊号：先把搜不到的排出来</a><span style="color:#6b6b6b">20 技能 · 20 应用</span></li></ul></article></div>
+<div class="wrap"><article><h2>往期</h2><ul class="archive"><li><a href="weekly/2026-10-26.html">第 2 期 · 2026-10-26 · 一周 9,349 个新出生的网址，2,948 个活着能用，这 27 个有意思</a><span style="color:#6b6b6b">精选 27 · 收录 2948</span></li><li><a href="issues/2026-10-26.html">第 1 期 · 2026-10-26 · 创刊号：先把搜不到的排出来（创刊号，旧方法）</a><span style="color:#6b6b6b">20 技能 · 20 应用</span></li></ul></article></div>
 <footer><div class="wrap">
- <div>出品：野榜 · 每周一发布，数据截至发布前一天 24:00（北京时间）</div>
+ <div>出品：野榜 · 每周一发布，收录最近 7 天新出生的网站</div>
  <div><a href="method.html">方法公开</a> · <a href="https://github.com/0xrelander/yebang/issues/new?template=claim.yml&amp;title=%5B%E8%AE%A4%E9%A2%86%2F%E7%BA%A0%E9%94%99%5D+">认领 / 纠错</a> · <a href="https://github.com/0xrelander/yebang">数据与代码</a></div>
 </div></footer>
 </body></html>

@@ -21,7 +21,7 @@ BIG_CO = {"vercel-labs", "vercel", "anthropics", "anthropic", "openai", "google"
           "supabase", "stripe", "cloudflare", "github", "heygen-com", "expo", "n8n-io", "remotion-dev", "mattpocock", "obra", "anthropic-ai", "modelcontextprotocol"}
 BIG_CO_RE = re.compile(r"(feishu|lark|tencent|alibaba|aliyun|bytedance|baidu|huawei|apache|microsoft|google|openai|anthropic|vercel|xiaomi|jd\.com|meituan|netease|kuaishou|bilibili-official)", re.I)
 MEDIA_RE = re.compile(r"(bilibili\.com|youtube\.com|youtu\.be|mp\.weixin\.qq\.com|zhihu\.com|xiaohongshu\.com|weibo\.com|juejin\.cn|csdn\.net|twitter\.com|x\.com/|douyin\.com|t\.me/|discord\.gg|qq\.com/.*group|\.md$|\.(png|jpe?g|gif|webp|svg)(\?|$))", re.I)
-RELAY_RE = re.compile(r"(中转|代理|api\s*key\s*池|免费额度|免费\s*api|白嫖|镜像站|翻墙|vpn|机场|key\s*池|额度共享|低价\s*api|倒卖)", re.I)
+RELAY_RE = re.compile(r"(中转|代理|api\s*key\s*池|免费额度|免费\s*api|白嫖|镜像站|翻墙|vpn|机场|key\s*池|额度共享|低价\s*api|倒卖|代充|充值|卡密|clash|梯子|token\s*提取|逆向工程\s*api|邀请核销|指纹浏览器)", re.I)
 TOP_N = 20
 
 def norm_name(s):

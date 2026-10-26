@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>野榜 第 2 期 · 2026-10-26</title>
+<meta name="description" content="野榜第2期：一周 9,349 个新出生的网址，2,948 个活着能用，这 27 个有意思">
+<style>
+:root{--accent:#FF4D00;--ink:#111;--muted:#6b6b6b;--line:#e6e6e6;--bg:#fff;--soft:#f6f6f4}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;line-height:1.55;font-size:16px}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:900;font-size:26px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.logo i{display:inline-block;width:14px;height:14px;background:var(--accent);border-radius:2px;transform:rotate(45deg)}
+nav a{margin-left:22px;font-size:15px;color:var(--muted)}
+nav a.on{color:var(--ink);font-weight:600}
+.hero{padding:44px 0 20px}
+.hero .issue{color:var(--accent);font-weight:800;letter-spacing:.08em;font-size:14px;text-transform:uppercase}
+.hero h1{font-size:44px;line-height:1.15;margin:8px 0 14px;font-weight:900;letter-spacing:-.01em}
+.hero p{color:var(--muted);max-width:720px;margin:0;font-size:17px}
+.meta{display:flex;flex-wrap:wrap;gap:14px 28px;color:var(--muted);font-size:14px;margin-top:18px}
+.meta b{color:var(--ink);font-weight:600}
+.search{margin:22px 0 10px}
+.search input{width:100%;font-size:20px;padding:14px 18px;border:2px solid var(--ink);border-radius:8px;outline:none;font-family:inherit;background:#fff}
+.search input:focus{border-color:var(--accent)}
+.facets{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.facets button{font:inherit;font-size:14px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;cursor:pointer;color:#333}
+.facets button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.facets button small{color:#999;margin-left:4px}
+.facets button.on small{color:#ccc}
+.count{color:var(--muted);font-size:14px;margin:6px 0 18px}
+section.board{margin:30px 0 48px}
+section.board h2{font-size:26px;margin:0 0 6px;display:flex;align-items:baseline;gap:12px}
+section.board h2 small{font-size:14px;color:var(--muted);font-weight:500}
+section.board .sub{color:var(--muted);margin:0 0 18px;font-size:15px}
+h3.ind{font-size:18px;margin:26px 0 8px;display:flex;align-items:center;gap:10px}
+h3.ind:before{content:"";display:inline-block;width:10px;height:10px;background:var(--accent);transform:rotate(45deg)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:#fff}
+.card .name{font-size:18px;font-weight:800;line-height:1.3}
+.card .by{color:var(--muted);font-size:13px;margin-top:3px}
+.card .by a{color:var(--ink)}
+.card .desc{font-size:14.5px;color:#333;margin-top:8px}
+.card .why{margin-top:10px;padding:10px 12px;background:var(--soft);border-left:3px solid var(--accent);font-size:14.5px;border-radius:3px}
+.card .why b{color:var(--accent);font-weight:800;margin-right:4px}
+.dims{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:10px;font-size:12px;color:var(--muted)}
+.dims span i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#ddd;margin-left:3px;vertical-align:middle}
+.dims span i.on{background:var(--accent)}
+ol.rank,ul.lib{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+ol.rank li{display:grid;grid-template-columns:56px 1fr 150px;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+ul.lib li{display:grid;grid-template-columns:1fr 120px;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);align-items:start}
+ul.lib li.hide{display:none}
+ol.rank .no{font-size:30px;font-weight:900;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+ol.rank li:nth-child(-n+3) .no{color:var(--accent)}
+.name{font-size:18px;font-weight:700;line-height:1.3}
+ul.lib .name{font-size:16.5px}
+.by{color:var(--muted);font-size:14px;margin-top:2px}
+.by a{color:var(--ink)}
+.desc{margin-top:6px;font-size:15px;color:#333}
+ul.lib .desc{font-size:14px;margin-top:3px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--muted);background:var(--soft)}
+.chip.ok{border-color:#bfe3c6;color:#1f7a37;background:#eef9f0}
+.chip.src{border-color:#f3cdbb;color:#b0400c;background:#fff3ec}
+.chip.ind{border-color:#ddd;color:#333;background:#fff}
+.num{text-align:right}
+.num .v{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.1}
+.num .l{font-size:12px;color:var(--muted);margin-top:3px}
+.num .d{font-size:13px;color:#1f7a37;margin-top:3px;font-weight:600}
+.side{text-align:right;font-size:12px;color:var(--muted);line-height:1.5}
+.side b{color:var(--ink);font-weight:700;font-size:13px}
+.note{background:var(--soft);border-left:4px solid var(--accent);padding:14px 18px;border-radius:4px;color:#333;font-size:15px;margin:24px 0}
+.stats{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}
+.stats td{border-bottom:1px solid var(--line);padding:7px 10px;vertical-align:top;text-align:right;font-variant-numeric:tabular-nums}
+.stats td:first-child{text-align:left}
+.stats tr:first-child td{font-weight:700;border-bottom:2px solid var(--ink)}
+footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+footer a{color:var(--ink)}
+article{max-width:720px;padding:32px 0 56px}
+article h2{font-size:30px;margin:0 0 20px}
+article h3{font-size:21px;margin:34px 0 10px}
+article h4{font-size:17px;margin:26px 0 8px}
+article p,article li{font-size:16.5px;color:#222}
+article code{background:var(--soft);padding:1px 6px;border-radius:3px;font-size:14px}
+article table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+article td{border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top}
+article tr:first-child td{font-weight:700;border-bottom:2px solid var(--ink)}
+ul.archive{list-style:none;padding:0}
+ul.archive li{padding:14px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}
+.cta{display:inline-block;background:var(--ink);color:#fff;padding:10px 18px;border-radius:6px;font-weight:600;font-size:15px}
+.cta.alt{background:var(--accent)}
+.cta:hover{text-decoration:none;opacity:.9}
+@media (max-width:640px){
+ .hero h1{font-size:32px}
+ .cards{grid-template-columns:1fr}
+ ol.rank li{grid-template-columns:40px 1fr;gap:12px}
+ ul.lib li{grid-template-columns:1fr}
+ .side{text-align:left}
+ ol.rank .no{font-size:24px}
+ .num{grid-column:2;text-align:left;display:flex;gap:10px;align-items:baseline}
+ .num .l{margin:0}
+ nav a{margin-left:12px;font-size:13px}
+ .logo{font-size:22px}
+}
+</style></head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="logo" href="index.html"><i></i>野榜</a>
+ <nav><a href="index.html" class="">搜索</a><a href="weekly.html" class="on">本周精选</a><a href="archive.html" class="">往期</a><a href="method.html" class="">方法</a><a href="submit.html" class="">投稿 / 认领</a></nav>
+</div></header>
+<div class="wrap">
+<div class="hero">
+ <div class="issue">第 2 期 · 2026-10-26</div>
+ <h1>一周 9,349 个新出生的网址，2,948 个活着能用，这 27 个有意思</h1>
+ <p>从本周过了四道门的 2948 个野生网站里挑出 27 个有意思的，每个写一句为什么。六个维度每个 0–2 分，分是编辑打的，<a href="method.html">挑法在这</a>。</p>
+ <div style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap"><a class="cta" href="index.html">搜全部 2948 个</a><a class="cta alt" href="https://github.com/0xrelander/yebang/issues/new?template=submit.yml&amp;title=%5B%E6%8A%95%E7%A8%BF%5D+">我做了个网站，投稿</a></div>
+</div>
+<div class="note"><p><strong>本期起换了方法。</strong> 创刊号从六个技能市场拉下载量按热度排，被读者（也是出品人）否了：热度把陪聊壳排第一，把真解决一个行业问题的小东西埋掉。从这期起，野榜不排热度：去 GitHub 新仓、Show HN、Hugging Face Spaces、V2EX 这些「出生登记处」拉最近 7 天新出生的网址，机器过四道门（是独立网站 / 作者是个人 / 当天打得开 / 有可操作界面），过门的全部进搜索库；再从里面挑有意思的，六个维度打分、一句为什么。分是编辑打的，每周公开，欢迎来戳。</p>
+<p><strong>本周一个现象：</strong> 麦当劳中国开放了点餐 MCP 接口并办了程序员创意大赛，一周之内冒出四十多个个人做的麦当劳比价、配餐、考古、点餐人格测试站。一家公司把接口开出来，野生开发者一周就长出一片小生态——这正是野榜想盯着看的东西。本期从里面挑了三个做法最特别的。</p></div>
+<section class="board"><h3 class="ind">金融投研 <small style="font-weight:500;color:var(--muted);font-size:13px">4 个</small></h3><div class="cards"><div class="card">
+ <div class="name"><a href="https://yanxinrui27.github.io/xinyoushu-tax-planner" rel="noopener">薪有数</a></div>
+ <div class="by"><a href="https://github.com/yanxinrui27" rel="noopener">yanxinrui27</a> · 2026-10-21 出生</div>
+ <div class="desc">个人所得税与税后收入决策工作台：逐月录入收入与扣除，看全年到手、累计税负和资金去向，比较年度汇算方案。数据只存本机。</div>
+ <div class="why"><b>为什么有意思</b>把「算税」从查表变成能比方案的工作台：同样的年终奖怎么发、专项扣除怎么填，到手差多少当场看见，而且数据不出你的电脑。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/yanxinrui27/xinyoushu-tax-planner" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://zilu.me" rel="noopener">资路</a></div>
+ <div class="by"><a href="https://www.v2ex.com/member/edl7878" rel="noopener">edl7878</a> · 2026-10-22 出生</div>
+ <div class="desc">个人及家庭资产管理：收支、资产负债、投资交易统一记录，出月度报告、资产负债表、收益分析，AI 辅助录入。</div>
+ <div class="why"><b>为什么有意思</b>记账软件很多，给一个家庭出资产负债表和投资收益分析的很少。这是把「公司财务三张表」缩到一个家庭上。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class="on"></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://www.v2ex.com/t/1250858" rel="noopener">V2EX</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://calends.date" rel="noopener">订阅账本 Calends</a></div>
+ <div class="by"><a href="https://github.com/imetn" rel="noopener">imetn</a> · 2026-10-21 出生</div>
+ <div class="desc">开源的个人订阅记账：多币种与历史汇率、合租分摊、代付、钱包余额能撑多久、日历与提醒；粘贴收据就能记。</div>
+ <div class="why"><b>为什么有意思</b>只盯一件事：你每个月被多少订阅自动扣钱。合租分摊和「余额还能续几个月」这两个细节，是真有人在用才会想到的。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class="on"></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/imetn/calends" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://trends.polyhelper.ai/markets" rel="noopener">Poly Council 10</a></div>
+ <div class="by"><a href="https://github.com/vadimchernets" rel="noopener">vadimchernets</a> · 2026-10-19 出生</div>
+ <div class="desc">每个交易日开盘前，九个 AI 模型各自给出对 S&amp;P 500 等市场的判断，封存后按收盘结果打分，历史全公开。</div>
+ <div class="why"><b>为什么有意思</b>不是又一个「AI 荐股」，而是把九个模型的预判先封存、再对账、再记分——它在公开回答「AI 到底会不会看盘」这个问题。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class="on"></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/vadimchernets/poly-council-10" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span></div>
+</div></div><h3 class="ind">医疗健康 <small style="font-weight:500;color:var(--muted);font-size:13px">1 个</small></h3><div class="cards"><div class="card">
+ <div class="name"><a href="https://kexin1409.github.io/how-to-check-better" rel="noopener">高性价比体检筛查指南</a></div>
+ <div class="by"><a href="https://github.com/kexin1409" rel="noopener">kexin1409</a> · 2026-10-20 出生</div>
+ <div class="desc">144 条体检建议，以国家癌症中心六大癌症筛查方法和 USPSTF 分级为骨架：哪些检查真能降低死亡率，哪些是过度检查。</div>
+ <div class="why"><b>为什么有意思</b>体检套餐是卖的，这页是按证据分级的。它回答的是「哪项不用做」，这恰恰是没人愿意告诉你的。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/kexin1409/how-to-check-better" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div></div><h3 class="ind">法律合规 <small style="font-weight:500;color:var(--muted);font-size:13px">1 个</small></h3><div class="cards"><div class="card">
+ <div class="name"><a href="https://dovepass.com" rel="noopener">Dovepass</a></div>
+ <div class="by"><a href="https://news.ycombinator.com/user?id=nimitmehra" rel="noopener">nimitmehra</a> · 2026-10-19 出生</div>
+ <div class="desc">在地图上画一条无人机航线，告诉你在旧金山沿这条线飞合不合法。</div>
+ <div class="why"><b>为什么有意思</b>法规查询做成了「画一条线就有答案」。把空域规则落到一条具体航线上，是法律类工具里少见的具体。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class="on"></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class="on"></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://news.ycombinator.com/item?id=50156779" rel="noopener">Show HN</a><span class="chip ok">10-26 打开过</span></div>
+</div></div><h3 class="ind">教育学习 <small style="font-weight:500;color:var(--muted);font-size:13px">4 个</small></h3><div class="cards"><div class="card">
+ <div class="name"><a href="https://qerssd.github.io/HowToAvoidScams" rel="noopener">人间防骗指南</a></div>
+ <div class="by"><a href="https://github.com/QERSSD" rel="noopener">QERSSD</a> · 2026-10-19 出生</div>
+ <div class="desc">373 个真实骗局逐个拆解：套路分几步、坑在哪、谁能一眼识破。附自查清单、PDF/EPUB/Anki 下载和 12 局防骗小游戏。</div>
+ <div class="why"><b>为什么有意思</b>防骗内容到处有，把它做成能练的——有自查清单、有 Anki 卡、有小游戏——的很少。给家里长辈的那种。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class="on"></i><i class="on"></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/QERSSD/HowToAvoidScams" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://dvbs2000.github.io/liuchunlin-shufa" rel="noopener">刘春霖 AI 小楷书房</a></div>
+ <div class="by"><a href="https://www.v2ex.com/member/dvbs2000" rel="noopener">dvbs2000</a> · 2026-10-25 出生</div>
+ <div class="desc">让 AI 学一本真实的小楷字帖的字形结构，然后生成任意文字的书法作品；同字异形轮换、部件级拼合。</div>
+ <div class="why"><b>为什么有意思</b>不是「书法字体」，是拿一本具体的字帖训出来的：你输入的每个字都按刘春霖的结构长出来。书法和 AI 第一次这么接。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class="on"></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class="on"></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://www.v2ex.com/t/1251592" rel="noopener">V2EX</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://littlebordercollie.github.io/mcd-together-order" rel="noopener">麦麦一起点</a></div>
+ <div class="by"><a href="https://github.com/littlebordercollie" rel="noopener">littlebordercollie</a> · 2026-10-19 出生</div>
+ <div class="desc">面向培智学校学生：孩子用图片和语音慢慢选自己想吃的，家长接着核对和下单。基于麦当劳中国 MCP 的点餐沟通原型。</div>
+ <div class="why"><b>为什么有意思</b>同一个麦当劳接口，别人拿来比价，这位拿来给培智学生做「自己点一次餐」的练习。技术一样，看见的人不一样。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class="on"></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class="on"></i><i class="on"></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/littlebordercollie/mcd-together-order" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://zhiyuanxing.pages.dev" rel="noopener">志愿星</a></div>
+ <div class="by"><a href="https://github.com/tomlen045" rel="noopener">tomlen045</a> · 2026-10-21 出生</div>
+ <div class="desc">高考志愿填报分析：按位次锚定冲稳保推荐、提分 ROI 规划、就业百科。广东 2022–2026 全量真实数据。</div>
+ <div class="why"><b>为什么有意思</b>志愿填报工具大多卖课，这个把一个省五年的真实录取数据和「再提多少分能换哪所学校」的账直接摊开。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/tomlen045/zhiyuanxing" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div></div><h3 class="ind">办公效率 <small style="font-weight:500;color:var(--muted);font-size:13px">4 个</small></h3><div class="cards"><div class="card">
+ <div class="name"><a href="https://zzy-six.github.io/resume-tailor-app" rel="noopener">简历定制助手 Pro</a></div>
+ <div class="by"><a href="https://github.com/Zzy-six" rel="noopener">Zzy-six</a> · 2026-10-24 出生</div>
+ <div class="desc">上传简历和招聘要求（图片或文档都行），自动识别岗位方向、分析技术栈匹配，免 Key 本地 AI 重写成定制简历。</div>
+ <div class="why"><b>为什么有意思</b>投一个岗改一版简历是最烦的活。这个把「招聘截图 → 匹配分析 → 改好的简历」做成一步，还不要 API Key。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/Zzy-six/resume-tailor-app" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://x-vibe.cn/chat-sheet" rel="noopener">VibeSheet 表格助手</a></div>
+ <div class="by"><a href="https://github.com/ActivePeter" rel="noopener">ActivePeter</a> · 2026-10-19 出生</div>
+ <div class="desc">上传 Excel/CSV，用一句话完成汇总、清洗、多表匹配、透视、图表和导出，版本可回退。</div>
+ <div class="why"><b>为什么有意思</b>Excel 里最费人的是 VLOOKUP 和透视表，这个让你用一句话说，而且每一步都能退回去——敢退回去才敢交给 AI。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/ActivePeter/ChatSheet-AI-Excel-Assistant" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://blurdata.app/redaction-checker" rel="noopener">PDF 涂黑检查器</a></div>
+ <div class="by"><a href="https://news.ycombinator.com/user?id=iyia" rel="noopener">iyia</a> · 2026-10-19 出生</div>
+ <div class="desc">拖一份做过涂黑处理的 PDF 进去，看黑条底下的文字是不是还在。免费，全程在浏览器里跑，文件不上传。</div>
+ <div class="why"><b>为什么有意思</b>很多「涂黑」只是盖了个黑框，文字还在底下。这个工具只做一件事：告诉你你的涂黑是不是假的。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class="on"></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class="on"></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://news.ycombinator.com/item?id=50150966" rel="noopener">Show HN</a><span class="chip ok">10-26 打开过</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://pikaclean.daoly.top" rel="noopener">Pika Clean</a></div>
+ <div class="by"><a href="https://github.com/black-robe-sanfeng" rel="noopener">black-robe-sanfeng</a> · 2026-10-26 出生</div>
+ <div class="desc">开源的 Mac 清理工具：清理、卸载、菜单栏监控，删每个文件之前先用 AI 告诉你它是什么、能不能删。</div>
+ <div class="why"><b>为什么有意思</b>清理软件都敢删，这个先解释。「这个 2GB 的缓存是什么」有人替你讲一句，才敢按删除。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/black-robe-sanfeng/pika-clean" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div></div><h3 class="ind">电商营销 <small style="font-weight:500;color:var(--muted);font-size:13px">1 个</small></h3><div class="cards"><div class="card">
+ <div class="name"><a href="https://pyq-zhishuan.github.io/wanjia-display-assistant" rel="noopener">门店美术陈列助手</a></div>
+ <div class="by"><a href="https://github.com/PYQ-Zhishuan" rel="noopener">PYQ-Zhishuan</a> · 2026-10-24 出生</div>
+ <div class="desc">选商品外形、拖动大小、按参考图试摆，给门店做陈列方案。离线可用的演示原型。</div>
+ <div class="why"><b>为什么有意思</b>线下门店陈列这个活几乎没有工具，这是给店员的「先在屏幕上摆一遍」。行业很小，但它是第一个。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class="on"></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/PYQ-Zhishuan/wanjia-display-assistant" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div></div><h3 class="ind">内容创作 <small style="font-weight:500;color:var(--muted);font-size:13px">4 个</small></h3><div class="cards"><div class="card">
+ <div class="name"><a href="https://renwei.yinghuo.fun" rel="noopener">人味</a></div>
+ <div class="by"><a href="https://www.v2ex.com/member/Hooki" rel="noopener">Hooki</a> · 2026-10-22 出生</div>
+ <div class="desc">晒作品、聊设计的作品观察站：支持自评和互评，后台接入模型自动打「人味」分，寻找 AI 之外属于自己的味道。</div>
+ <div class="why"><b>为什么有意思</b>大家都在说「去 AI 味」，这个站把「人味」做成了可以打分、可以互评的东西。做内容的人迟早会需要这把尺子。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class="on"></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class="on"></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://www.v2ex.com/t/1250804" rel="noopener">V2EX</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://lab.ytdeepsea.com/radar" rel="noopener">AI 情报站</a></div>
+ <div class="by"><a href="https://github.com/garycaogan" rel="noopener">garycaogan</a> · 2026-10-24 出生</div>
+ <div class="desc">每天早上自动扫一遍 B 站、YouTube、抖音、TikTok、小红书、X 和 GitHub，挑出 AI 和 AI 视频圈当天冒头的题材、热议和新工具，出一页日报。</div>
+ <div class="why"><b>为什么有意思</b>做 AI 内容的人每天要刷七个平台找选题，这个人把这件事写成了脚本并公开了。选题雷达，野生版。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class="on"></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/garycaogan/intel-radar" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://a2md.my" rel="noopener">a2md</a></div>
+ <div class="by"><a href="https://www.v2ex.com/member/X1lyS" rel="noopener">X1lyS</a> · 2026-10-22 出生</div>
+ <div class="desc">粘贴 B 站、YouTube、抖音、快手、小红书链接，或上传本地音视频，一键转成带时间戳的转写稿和结构化 AI 笔记，可出思维导图。</div>
+ <div class="why"><b>为什么有意思</b>把国内外主流视频平台的链接都接进了同一个转写口。做二创、做课程笔记的人，少装四个工具。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://www.v2ex.com/t/1251047" rel="noopener">V2EX</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://flexchords.com" rel="noopener">FlexChords</a></div>
+ <div class="by"><a href="https://news.ycombinator.com/user?id=amits97" rel="noopener">amits97</a> · 2026-10-20 出生</div>
+ <div class="desc">给任何 YouTube 视频或音频扒吉他和弦，边放边跟着弹。作者自己训的模型。</div>
+ <div class="why"><b>为什么有意思</b>扒谱网站要么靠人工上传，要么收费。这个是一个人自己训的模型直接从音频里听出来，而且跟着视频走。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class="on"></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class="on"></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://news.ycombinator.com/item?id=50163224" rel="noopener">Show HN</a><span class="chip ok">10-26 打开过</span></div>
+</div></div><h3 class="ind">设计创意 <small style="font-weight:500;color:var(--muted);font-size:13px">2 个</small></h3><div class="cards"><div class="card">
+ <div class="name"><a href="https://ianneo.xyz" rel="noopener">小红书图文排版 Skill（Ian）</a></div>
+ <div class="by"><a href="https://github.com/helloianneo" rel="noopener">helloianneo</a> · 2026-10-21 出生</div>
+ <div class="desc">把文章、案例或笔记排成 3:4 的小红书图文：1080×1440，20 个母版，浅色 / 深色。做成了 Claude Code Skill。</div>
+ <div class="why"><b>为什么有意思</b>在小红书发图文最耗时间的是排版。这个把 20 个母版做成了 AI 能调用的技能，一周 266 个 star 说明真有人在用。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class="on"></i><i class="on"></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/helloianneo/ian-xhs-carousel" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://guanmo-ai.github.io/design-style" rel="noopener">Design Style</a></div>
+ <div class="by"><a href="https://github.com/guanmo-ai" rel="noopener">guanmo-ai</a> · 2026-10-20 出生</div>
+ <div class="desc">每天一个设计风格：15 秒动效短片、风格图解、设计规则、AI 提示词和完整源码，全部开放。</div>
+ <div class="why"><b>为什么有意思</b>设计风格参考站很多，带动效短片和能直接跑的源码的没几个。看一个风格 15 秒，想抄就有源码。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class="on"></i><i class="on"></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/guanmo-ai/design-style" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div></div><h3 class="ind">生活服务 <small style="font-weight:500;color:var(--muted);font-size:13px">3 个</small></h3><div class="cards"><div class="card">
+ <div class="name"><a href="https://luck2058.github.io/mcd-trilemma" rel="noopener">麦门三路比价器</a></div>
+ <div class="by"><a href="https://github.com/Luck2058" rel="noopener">Luck2058</a> · 2026-10-21 出生</div>
+ <div class="desc">同一份麦当劳，外送 / 到店取餐 / 得来速三条路的真实到手价对比，用「临界时薪」把价差折成时间成本，再算清净热量。</div>
+ <div class="why"><b>为什么有意思</b>比价器很多，把「多走这一趟值不值」折成你的时薪来算的，第一次见。一个点餐接口被用出了经济学课的味道。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class="on"></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/Luck2058/mcd-trilemma" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://chendykjx.github.io/mcdiff" rel="noopener">McDiff</a></div>
+ <div class="by"><a href="https://github.com/Chendykjx" rel="noopener">Chendykjx</a> · 2026-10-24 出生</div>
+ <div class="desc">每天用麦当劳中国 MCP 采一次菜单快照，像 git commit 一样存下来，git diff 出今天谁涨价、谁下架；下架的餐品进「麦门考古博物馆」。</div>
+ <div class="why"><b>为什么有意思</b>把程序员最熟的 git diff 用在了菜单上。涨价和下架这种公司不会主动说的事，被一个人用快照对账对出来了。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class="on"></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/Chendykjx/mcdiff" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div><div class="card">
+ <div class="name"><a href="https://openairworkout.com" rel="noopener">Open Air Workout</a></div>
+ <div class="by"><a href="https://news.ycombinator.com/user?id=hunvreus" rel="noopener">hunvreus</a> · 2026-10-24 出生</div>
+ <div class="desc">找你附近和全世界的户外健身场：单杠公园、街健场地、健身步道，一张地图。</div>
+ <div class="why"><b>为什么有意思</b>健身房地图到处是，专门标户外单杠和街健场地的地图几乎没有。出差到一个城市想练一下，这个有用。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class="on"></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://news.ycombinator.com/item?id=50218188" rel="noopener">Show HN</a><span class="chip ok">10-26 打开过</span></div>
+</div></div><h3 class="ind">游戏娱乐 <small style="font-weight:500;color:var(--muted);font-size:13px">1 个</small></h3><div class="cards"><div class="card">
+ <div class="name"><a href="https://daoyi2026.github.io/firefly-line" rel="noopener">萤线</a></div>
+ <div class="by"><a href="https://github.com/daoyi2026" rel="noopener">daoyi2026</a> · 2026-10-21 出生</div>
+ <div class="desc">你和你的 AI 各牵一根光绳的一头，在毛绒绒的梦境里一起收集萤火虫的双人合作小游戏。</div>
+ <div class="why"><b>为什么有意思</b>AI 在游戏里通常是对手或 NPC，这里它是跟你牵着同一根绳的队友。一个人做的小游戏，但想法是新的。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class=""></i></span><span>第一次见<i class="on"></i><i class="on"></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/daoyi2026/firefly-line" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div></div><h3 class="ind">科研学术 <small style="font-weight:500;color:var(--muted);font-size:13px">1 个</small></h3><div class="cards"><div class="card">
+ <div class="name"><a href="https://mc-ler.github.io/Yuanbao_Search" rel="noopener">万物皆可查</a></div>
+ <div class="by"><a href="https://github.com/Mc-ler" rel="noopener">Mc-ler</a> · 2026-10-24 出生</div>
+ <div class="desc">输入一句话，自动拆需求、检索、给来源 A–E 分级、去重、出可引用的报告。深度研究和一句话查证两种模式，本地优先。</div>
+ <div class="why"><b>为什么有意思</b>AI 搜索的问题是来源不分好坏。这个把来源分了五级，每条结论能追到哪一级的来源——是「查证」而不是「生成」。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class=""></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/Mc-ler/Yuanbao_Search" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div></div><h3 class="ind">工业制造 <small style="font-weight:500;color:var(--muted);font-size:13px">1 个</small></h3><div class="cards"><div class="card">
+ <div class="name"><a href="https://549763551.github.io/vision-selector" rel="noopener">机器视觉智能选型助手</a></div>
+ <div class="by"><a href="https://github.com/549763551" rel="noopener">549763551</a> · 2026-10-21 出生</div>
+ <div class="desc">输入视野、精度、任务和材质，自动推导工业相机 + 镜头 + 光源方案，每一步算术摊开可复核；内置海康、华睿、Basler、大恒四品牌近千台型号参数库。</div>
+ <div class="why"><b>为什么有意思</b>工厂里做视觉检测，选相机镜头光源靠销售推荐和老师傅经验。这个把算法和四个品牌的参数库摊在网页上，这是真正的行业工具。</div>
+ <div class="dims"><span>真能用<i class="on"></i><i class="on"></i></span><span>解决具体环节<i class="on"></i><i class="on"></i></span><span>第一次见<i class="on"></i><i class="on"></i></span><span>野生<i class="on"></i><i class="on"></i></span><span>有真人用<i class=""></i><i class=""></i></span><span>可核可认领<i class="on"></i><i class="on"></i></span></div>
+ <div class="chips"><a class="chip src" href="https://github.com/549763551/vision-selector" rel="noopener">GitHub</a><span class="chip ok">10-26 打开过</span><span class="chip">中文</span></div>
+</div></div></section>
+<section class="board" id="stats">
+ <h2>这周扫了多少 <small>四道门的数字</small></h2>
+ <p class="sub">每个登记处拉了多少候选、拦在哪道门、最后收录多少。收录的 2948 个按行业：开发工具 1038、其他 572、内容创作 363、办公效率 174、设计创意 148、教育学习 139、金融投研 111、游戏娱乐 94、电商营销 82、生活服务 75、科研学术 75、医疗健康 53、法律合规 24。</p>
+ <table class="stats"><tr><td>登记处</td><td>候选</td><td>网址不算网站</td><td>非个人或大厂</td><td>中转代理</td><td>打不开</td><td>没有可用界面</td><td>收录</td></tr><tr><td>GitHub 新仓</td><td>5,298</td><td>1,045</td><td>996</td><td>43</td><td>814</td><td>386</td><td>1,779</td></tr><tr><td>Hugging Face Spaces</td><td>3,000</td><td>34</td><td>38</td><td>0</td><td>2,247</td><td>43</td><td>638</td></tr><tr><td>Show HN</td><td>983</td><td>380</td><td>0</td><td>1</td><td>37</td><td>55</td><td>497</td></tr><tr><td>V2EX 分享创造</td><td>68</td><td>26</td><td>0</td><td>1</td><td>3</td><td>2</td><td>34</td></tr><tr><td><b>合计</b></td><td><b>9,349</b></td><td><b>1,485</b></td><td><b>1,034</b></td><td><b>45</b></td><td><b>3,101</b></td><td><b>486</b></td><td><b>2,948</b></td></tr></table>
+</section>
+</div>
+<footer><div class="wrap">
+ <div>出品：野榜 · 每周一发布，收录最近 7 天新出生的网站</div>
+ <div><a href="method.html">方法公开</a> · <a href="https://github.com/0xrelander/yebang/issues/new?template=claim.yml&amp;title=%5B%E8%AE%A4%E9%A2%86%2F%E7%BA%A0%E9%94%99%5D+">认领 / 纠错</a> · <a href="https://github.com/0xrelander/yebang">数据与代码</a></div>
+</div></footer>
+</body></html>

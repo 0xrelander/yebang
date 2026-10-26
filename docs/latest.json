@@ -1,1766 +1,1178 @@
 {
- "issue": 1,
+ "issue": 2,
  "date": "2026-10-26",
- "period": "2026-10-20 ～ 2026-10-26",
- "cutoff": "2026-10-26 11:00（北京时间）",
- "title": "创刊号：先把搜不到的排出来",
- "note": "**创刊号说明。** 这期按各来源的累计数值排，从第 2 期起主排本周增量，本期数据已留快照。技能榜候选来自 SkillHub、ClawHub、虾评Skill、skills.sh 四个市场，应用榜来自扣子商店和 V2EX 分享创造，外加投稿（这期还没有）。大厂官方出品、中转代理类、发布当天打不开的都没进。扣子商店的接口不给作者名，这类条目标「未署名」，是你做的来认领。排法全文见[方法](method.html)，原始数据和脚本在仓库里，欢迎自己跑一遍核对。",
- "skills": [
+ "title": "一周 9,349 个新出生的网址，2,948 个活着能用，这 27 个有意思",
+ "note": "**本期起换了方法。** 创刊号从六个技能市场拉下载量按热度排，被读者（也是出品人）否了：热度把陪聊壳排第一，把真解决一个行业问题的小东西埋掉。从这期起，野榜不排热度：去 GitHub 新仓、Show HN、Hugging Face Spaces、V2EX 这些「出生登记处」拉最近 7 天新出生的网址，机器过四道门（是独立网站 / 作者是个人 / 当天打得开 / 有可操作界面），过门的全部进搜索库；再从里面挑有意思的，六个维度打分、一句为什么。分是编辑打的，每周公开，欢迎来戳。\n\n**本周一个现象：** 麦当劳中国开放了点餐 MCP 接口并办了程序员创意大赛，一周之内冒出四十多个个人做的麦当劳比价、配餐、考古、点餐人格测试站。一家公司把接口开出来，野生开发者一周就长出一片小生态——这正是野榜想盯着看的东西。本期从里面挑了三个做法最特别的。",
+ "poster_title": "这周新出生的野生 AI 网站",
+ "poster_sub": "一周 9,349 个新网址，2,948 个活着能用 · 个人做的、搜索引擎还看不见的 · 挑了 27 个",
+ "poster_note": "全部 2,948 个可搜；是你做的，来认领。",
+ "picks": [
   {
-   "score": 1.2067,
-   "name": "ppt-master",
-   "url": "https://skills.sh/hugohe3/ppt-master/hugohe3/ppt-master/ppt-master",
-   "author": "hugohe3",
-   "author_url": "https://github.com/hugohe3",
-   "platforms": [
-    "OpenClaw",
-    "WorkBuddy",
-    "Claude Code",
-    "Codex",
-    "Cursor"
-   ],
-   "desc": "这是一个自动为用户生成 PPT 演示文稿的技能，可依据用户特殊要求如：篇幅、场景、语气，角色等描述以及根据用户的文件（包含 docx、图片等多格式文件）一键生成 PPT 演示文稿。",
-   "source": "skills.sh",
-   "source_url": "https://skills.sh/hugohe3/ppt-master/hugohe3/ppt-master/ppt-master",
-   "metric_label": "累计安装",
-   "metric": 19776,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/skeyjia6/skills/aippt",
-     "metric_label": "下载量",
-     "metric": 2216,
-     "author": "skeyjia6"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@user_741c61d8/ai-ppt-skill",
-     "metric_label": "下载量",
-     "metric": 194119,
-     "author": "user_741c61d8"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/hugohe3/ppt-master/hugohe3/ppt-master/ppt-master",
-     "metric_label": "累计安装",
-     "metric": 19776,
-     "author": "hugohe3"
-    },
-    {
-     "src_name": "虾评Skill",
-     "url": "https://xiaping.coze.com/skill/4c939616-f4de-4eff-ba91-dccee94a0864",
-     "metric_label": "下载量",
-     "metric": 54,
-     "author": "AgentFast"
-    }
-   ],
-   "created_at": "",
-   "extra": {
-    "github": "https://github.com/hugohe3/ppt-master",
-    "found_by_search": true
-   },
-   "rank": 1
-  },
-  {
-   "score": 1.2,
-   "name": "humanizer-zh",
-   "url": "https://skills.sh/op7418/humanizer-zh/op7418/humanizer-zh/humanizer-zh",
-   "author": "op7418",
-   "author_url": "https://github.com/op7418",
-   "platforms": [
-    "OpenClaw",
-    "WorkBuddy",
-    "Claude Code",
-    "Codex",
-    "Cursor"
-   ],
-   "desc": "去除文本中的 AI 生成痕迹。适用于编辑或审阅文本，使其听起来更自然、更像人类书写。 基于维基百科的\"AI 写作特征\"综合指南。检测并修复以下模式：夸大的象征意义、 宣传性语言、以",
-   "source": "skills.sh",
-   "source_url": "https://skills.sh/op7418/humanizer-zh/op7418/humanizer-zh/humanizer-zh",
-   "metric_label": "累计安装",
-   "metric": 54726,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/liuxy951129-cpu/skills/humanizer-zh",
-     "metric_label": "下载量",
-     "metric": 17812,
-     "author": "liuxy951129-cpu"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@user_c160f2b7/humanizer-zh",
-     "metric_label": "下载量",
-     "metric": 81683,
-     "author": "user_c160f2b7"
-    },
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/bbintom123321-lab/skills/humanize-zh",
-     "metric_label": "下载量",
-     "metric": 4659,
-     "author": "bbintom123321-lab"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@user_4e7171fa/humanizer-zh",
-     "metric_label": "下载量",
-     "metric": 73371,
-     "author": "user_4e7171fa"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@user_96b3f16c/humanizer-zh",
-     "metric_label": "下载量",
-     "metric": 67168,
-     "author": "user_96b3f16c"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@user_05fa8b39/humanizer-zh",
-     "metric_label": "下载量",
-     "metric": 48371,
-     "author": "user_05fa8b39"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/op7418/humanizer-zh/op7418/humanizer-zh/humanizer-zh",
-     "metric_label": "累计安装",
-     "metric": 54726,
-     "author": "op7418"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/ai-zixun/humanizer-zh/ai-zixun/humanizer-zh/humanizer-zh",
-     "metric_label": "累计安装",
-     "metric": 1270,
-     "author": "ai-zixun"
-    }
-   ],
-   "created_at": "",
-   "extra": {
-    "github": "https://github.com/op7418/humanizer-zh",
-    "found_by_search": true
-   },
-   "rank": 2
-  },
-  {
-   "score": 1.1932,
-   "name": "Agent自我进化",
-   "url": "https://xiaping.coze.com/skill/79bfe876-2660-4f2c-a038-a26d2e194a71",
-   "author": "9527",
-   "author_url": "",
-   "platforms": [
-    "OpenClaw",
-    "WorkBuddy"
-   ],
-   "desc": "AI Agent自学习和改进完整技能方案。通过反馈循环提升能力，实现自我优化和持续进化。提供智能化的自我提升机制。",
-   "source": "虾评Skill",
-   "source_url": "https://xiaping.coze.com/skill/79bfe876-2660-4f2c-a038-a26d2e194a71",
-   "metric_label": "下载量",
-   "metric": 29762,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/zhengxinjipai/skills/self-improving-agent-cn",
-     "metric_label": "下载量",
-     "metric": 24985,
-     "author": "zhengxinjipai"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@kunlungrowth/self-improving-agent-cn",
-     "metric_label": "下载量",
-     "metric": 27803,
-     "author": "昆仑增长"
-    },
-    {
-     "src_name": "虾评Skill",
-     "url": "https://xiaping.coze.com/skill/79bfe876-2660-4f2c-a038-a26d2e194a71",
-     "metric_label": "下载量",
-     "metric": 29762,
-     "author": "9527"
-    },
-    {
-     "src_name": "虾评Skill",
-     "url": "https://xiaping.coze.com/skill/eaf55357-e791-44dc-9ebf-1171f2c692ff",
-     "metric_label": "下载量",
-     "metric": 60,
-     "author": "云"
-    }
-   ],
-   "created_at": "2026-03-05",
-   "extra": {
-    "avg_stars_x100": 477,
-    "star_count": 3080,
-    "comment_count": 4858,
-    "category": [
-     "IT/互联网"
-    ]
-   },
-   "rank": 3
-  },
-  {
-   "score": 1.1845,
-   "name": "ppt-generator",
-   "url": "https://clawhub.ai/wwlyzzyorg/skills/ppt-generator",
-   "author": "wwlyzzyorg",
-   "author_url": "https://clawhub.ai/u/wwlyzzyorg",
-   "platforms": [
-    "OpenClaw",
-    "WorkBuddy",
-    "Claude Code",
-    "Codex",
-    "Cursor"
-   ],
-   "desc": "将讲稿一键生成乔布斯风极简科技感竖屏HTML演示稿",
-   "source": "ClawHub",
-   "source_url": "https://clawhub.ai/wwlyzzyorg/skills/ppt-generator",
-   "metric_label": "下载量",
-   "metric": 34231,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/wwlyzzyorg/skills/ppt-generator",
-     "metric_label": "下载量",
-     "metric": 34231,
-     "author": "wwlyzzyorg"
-    },
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/tobewin/skills/pptx-generator",
-     "metric_label": "下载量",
-     "metric": 11299,
-     "author": "tobewin"
-    },
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/sunerw-dev/skills/ppt-generator-1",
-     "metric_label": "下载量",
-     "metric": 2376,
-     "author": "sunerw-dev"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@user_3b34947d/ppt-generator-skill",
-     "metric_label": "下载量",
-     "metric": 418281,
-     "author": "user_3b34947d"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/skills.volces.com/skills.volces.com/ppt-generator",
-     "metric_label": "累计安装",
-     "metric": 253,
-     "author": "skills.volces.com"
-    }
-   ],
-   "created_at": "2026-02-04",
-   "extra": {
-    "installs": 1200,
-    "stars": 85,
-    "comments": 0,
-    "versions": 1,
-    "slug": "ppt-generator",
-    "topics": []
-   },
-   "rank": 4
-  },
-  {
-   "score": 1.1116,
-   "name": "html-ppt",
-   "url": "https://skills.sh/lewislulu/html-ppt-skill/lewislulu/html-ppt-skill/html-ppt",
-   "author": "lewislulu",
-   "author_url": "https://github.com/lewislulu",
-   "platforms": [
-    "OpenClaw",
-    "WorkBuddy",
-    "Claude Code",
-    "Codex",
-    "Cursor"
-   ],
-   "desc": "会自己设计PPT的智能报告技能，内置47套PPT模板（商务、科技、创意、学术、政府、金融等全场景覆盖），根据主题风格自由选配模板并自主设计，将任意输入拆解为5-15页精美HTML报",
-   "source": "skills.sh",
-   "source_url": "https://skills.sh/lewislulu/html-ppt-skill/lewislulu/html-ppt-skill/html-ppt",
-   "metric_label": "累计安装",
-   "metric": 20853,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/panhongwei/skills/html-ppt-generator",
-     "metric_label": "下载量",
-     "metric": 2460,
-     "author": "panhongwei"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@user_e9af5021/html-ppt-skill",
-     "metric_label": "下载量",
-     "metric": 54575,
-     "author": "user_e9af5021"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/lewislulu/html-ppt-skill/lewislulu/html-ppt-skill/html-ppt",
-     "metric_label": "累计安装",
-     "metric": 20853,
-     "author": "lewislulu"
-    }
-   ],
-   "created_at": "",
-   "extra": {
-    "github": "https://github.com/lewislulu/html-ppt-skill",
-    "found_by_search": true
-   },
-   "rank": 5
-  },
-  {
-   "score": 1.0705,
-   "name": "ppt",
-   "url": "https://clawhub.ai/zhj7860/skills/ppt",
-   "author": "zhj7860",
-   "author_url": "https://clawhub.ai/u/zhj7860",
-   "platforms": [
-    "OpenClaw",
-    "WorkBuddy",
-    "Claude Code",
-    "Codex",
-    "Cursor"
-   ],
-   "desc": "将讲稿一键生成乔布斯风极简科技感竖屏HTML演示稿",
-   "source": "ClawHub",
-   "source_url": "https://clawhub.ai/zhj7860/skills/ppt",
-   "metric_label": "下载量",
-   "metric": 10214,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/zhj7860/skills/ppt",
-     "metric_label": "下载量",
-     "metric": 10214,
-     "author": "zhj7860"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@user_f9ab891e/666-v2",
-     "metric_label": "下载量",
-     "metric": 191684,
-     "author": "user_f9ab891e"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/modelscope.cn/modelscope.cn/ppt",
-     "metric_label": "累计安装",
-     "metric": 426,
-     "author": "modelscope.cn"
-    }
-   ],
-   "created_at": "2026-02-19",
-   "extra": {
-    "installs": 247,
-    "stars": 5,
-    "comments": 0,
-    "versions": 1,
-    "slug": "ppt",
-    "topics": []
-   },
-   "rank": 6
-  },
-  {
-   "score": 1.0616,
-   "name": "编程专家.Skill",
-   "url": "https://www.skillhub.cn/skills/@indiv-ebandao/dev-expert",
-   "author": "user_741dc82b",
-   "author_url": "",
-   "platforms": [
-    "OpenClaw",
-    "WorkBuddy"
-   ],
-   "desc": "编程专家.Skill P8级编程助手,25年实战经验技能Skill，全栈：Java/Php网站/软件项目、API设计、Bug诊断、代码生成、代码审查、重构、测试用例、性能基准、技术",
-   "source": "SkillHub",
-   "source_url": "https://www.skillhub.cn/skills/@indiv-ebandao/dev-expert",
-   "metric_label": "下载量",
-   "metric": 5073263,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/ebandao777-oss/skills/dev-expert",
-     "metric_label": "下载量",
-     "metric": 2112,
-     "author": "ebandao777-oss"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@indiv-ebandao/dev-expert",
-     "metric_label": "下载量",
-     "metric": 5073263,
-     "author": "user_741dc82b"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@user_814dbe54/dev-expert",
-     "metric_label": "下载量",
-     "metric": 4362185,
-     "author": "user_814dbe54"
-    }
-   ],
-   "created_at": "2026-06-18",
-   "extra": {
-    "stars": 366,
-    "installs": 0,
-    "score": 54083.85228712249,
-    "category": "dev-programming",
-    "upstream_url": null,
-    "canonical": "@indiv-ebandao/dev-expert",
-    "homepage": "https://api.skillhub.cn/indiv-ebandao/dev-expert"
-   },
-   "rank": 7
-  },
-  {
-   "score": 1.0582,
-   "name": "Yt Dlp Downloader",
-   "url": "https://clawhub.ai/apollo1234/skills/yt-dlp-downloader-skill",
-   "author": "apollo1234",
-   "author_url": "https://clawhub.ai/u/apollo1234",
-   "platforms": [
-    "OpenClaw",
-    "Claude Code",
-    "Codex",
-    "Cursor"
-   ],
-   "desc": "Download videos from YouTube, Bilibili, Twitter, and thousands of other sites using yt-dlp",
-   "source": "ClawHub",
-   "source_url": "https://clawhub.ai/apollo1234/skills/yt-dlp-downloader-skill",
-   "metric_label": "下载量",
-   "metric": 8965,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/apollo1234/skills/yt-dlp-downloader-skill",
-     "metric_label": "下载量",
-     "metric": 8965,
-     "author": "apollo1234"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/mapleshaw/yt-dlp-downloader-skill/mapleshaw/yt-dlp-downloader-skill/yt-dlp-downloader",
-     "metric_label": "累计安装",
-     "metric": 811,
-     "author": "mapleshaw"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/skills.volces.com/skills.volces.com/yt-dlp-downloader",
-     "metric_label": "累计安装",
-     "metric": 33,
-     "author": "skills.volces.com"
-    },
-    {
-     "src_name": "虾评Skill",
-     "url": "https://xiaping.coze.com/skill/336f9e06-0d1b-434c-a866-0f0c890c906a",
-     "metric_label": "下载量",
-     "metric": 15,
-     "author": "陈老C的Agent"
-    }
-   ],
-   "created_at": "2026-01-27",
-   "extra": {
-    "installs": 274,
-    "stars": 9,
-    "comments": 0,
-    "versions": 1,
-    "slug": "yt-dlp-downloader-skill",
+   "name": "薪有数",
+   "url": "https://yanxinrui27.github.io/xinyoushu-tax-planner",
+   "final_url": "https://yanxinrui27.github.io/xinyoushu-tax-planner/",
+   "source_url": "https://github.com/yanxinrui27/xinyoushu-tax-planner",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "yanxinrui27",
+   "author_url": "https://github.com/yanxinrui27",
+   "author_type": "individual",
+   "desc": "个人所得税与税后收入决策工作台：逐月录入收入与扣除，看全年到手、累计税负和资金去向，比较年度汇算方案。数据只存本机。",
+   "title": "薪有数",
+   "meta": "个人所得税、税后收入与年度筹划工具。默认演示账号可直接查看完整案例，也可创建本机空白账号使用。",
+   "lang": "zh",
+   "industry": "金融投研",
+   "has_ui": true,
+   "traction": false,
+   "signals": {
+    "stars": 2,
+    "forks": 0,
     "topics": [
-     "Audio",
-     "Twitter",
-     "抖音",
-     "音频"
-    ]
+     "financial-planning",
+     "github-pages",
+     "personal-income-tax",
+     "salary-calculator",
+     "tax-planner",
+     "vanilla-javascript"
+    ],
+    "language": "JavaScript"
    },
-   "rank": 8
+   "created_at": "2026-10-21",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "把「算税」从查表变成能比方案的工作台：同样的年终奖怎么发、专项扣除怎么填，到手差多少当场看见，而且数据不出你的电脑。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
+   },
+   "dim_total": 9
   },
   {
-   "score": 1.0575,
-   "name": "baoyu-post-to-wechat",
-   "url": "https://skills.sh/jimliu/baoyu-skills/jimliu/baoyu-skills/baoyu-post-to-wechat",
-   "author": "jimliu",
-   "author_url": "https://github.com/jimliu",
-   "platforms": [
-    "OpenClaw",
-    "Claude Code",
-    "Codex",
-    "Cursor"
-   ],
-   "desc": "Posts content to WeChat Official Account (微信公众号) via API or Chrome CDP. Supports article p",
-   "source": "skills.sh",
-   "source_url": "https://skills.sh/jimliu/baoyu-skills/jimliu/baoyu-skills/baoyu-post-to-wechat",
-   "metric_label": "累计安装",
-   "metric": 34410,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/jimliu/skills/baoyu-post-to-wechat",
-     "metric_label": "下载量",
-     "metric": 5499,
-     "author": "jimliu"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/jimliu/baoyu-skills/jimliu/baoyu-skills/baoyu-post-to-wechat",
-     "metric_label": "累计安装",
-     "metric": 34410,
-     "author": "jimliu"
-    }
-   ],
-   "created_at": "",
-   "extra": {
-    "github": "https://github.com/jimliu/baoyu-skills",
-    "found_by_search": true
+   "name": "资路",
+   "url": "https://zilu.me",
+   "final_url": "",
+   "source_url": "https://www.v2ex.com/t/1250858",
+   "src": "v2ex",
+   "src_name": "V2EX 分享创造",
+   "also": [],
+   "author": "edl7878",
+   "author_url": "https://www.v2ex.com/member/edl7878",
+   "author_type": "individual",
+   "desc": "个人及家庭资产管理：收支、资产负债、投资交易统一记录，出月度报告、资产负债表、收益分析，AI 辅助录入。",
+   "title": "资路",
+   "meta": "资路是一款个人资产管理工具，统一管理资产、负债、收支与投资，支持财务历史、月度报告、资产负债表、收支统计、资产趋势、投资收益分析和 AI 辅助录入。",
+   "lang": "zh",
+   "industry": "金融投研",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
+    "views": 816,
+    "replies": 4
    },
-   "rank": 9
+   "created_at": "2026-10-22",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 90,
+   "week": "2026-10-26",
+   "why": "记账软件很多，给一个家庭出资产负债表和投资收益分析的很少。这是把「公司财务三张表」缩到一个家庭上。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 1,
+    "verifiable": 2
+   },
+   "dim_total": 10
   },
   {
-   "score": 1.0522,
-   "name": "命理大师",
-   "url": "https://clawhub.ai/wscats/skills/university-applications",
-   "author": "wscats",
-   "author_url": "https://clawhub.ai/u/wscats",
-   "platforms": [
-    "OpenClaw",
-    "WorkBuddy"
-   ],
-   "desc": "全体系命理大师 — 八字四柱、紫微斗数、奇门遁甲、六爻、梅花易数、塔罗、星盘、 数字命理、九宫飞星风水、掌纹面相、起名命名、穿衣搭配、合婚择吉一站式解读。本地档案、可选每日推送（默",
-   "source": "ClawHub",
-   "source_url": "https://clawhub.ai/wscats/skills/university-applications",
-   "metric_label": "下载量",
-   "metric": 24283,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/wscats/skills/university-applications",
-     "metric_label": "下载量",
-     "metric": 24283,
-     "author": "wscats"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@user_ad872d55/destiny",
-     "metric_label": "下载量",
-     "metric": 15219,
-     "author": "user_ad872d55"
-    }
-   ],
-   "created_at": "2026-03-14",
-   "extra": {
-    "installs": 771,
+   "name": "订阅账本 Calends",
+   "url": "https://calends.date",
+   "final_url": "",
+   "source_url": "https://github.com/imetn/calends",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "imetn",
+   "author_url": "https://github.com/imetn",
+   "author_type": "individual",
+   "desc": "开源的个人订阅记账：多币种与历史汇率、合租分摊、代付、钱包余额能撑多久、日历与提醒；粘贴收据就能记。",
+   "title": "订阅账本 Calends",
+   "meta": "Calends（订阅账本）是开源的个人订阅记账工具：多币种与历史汇率、合租分摊、代付、钱包余额续航、日历与提醒；内置 AI 助手，粘贴收据就能记账，也能接入 Claude、Codex 等 AI。部署在 Cloudflare 或 Docker。",
+   "lang": "zh",
+   "industry": "金融投研",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
     "stars": 26,
-    "comments": 1,
-    "versions": 25,
-    "slug": "university-applications",
+    "forks": 3,
     "topics": [
-     "财务"
-    ]
+     "cloudflare-workers",
+     "docker",
+     "mcp",
+     "multi-currency",
+     "personal-finance",
+     "react",
+     "self-hosted",
+     "subscription-tracker"
+    ],
+    "language": "TypeScript"
    },
-   "rank": 10
-  },
-  {
-   "score": 1.0476,
-   "name": "百度网盘",
-   "url": "https://clawhub.ai/wscats/skills/baidu-netdisk-skills",
-   "author": "wscats",
-   "author_url": "https://clawhub.ai/u/wscats",
-   "platforms": [
-    "OpenClaw",
-    "WorkBuddy"
-   ],
-   "desc": "百度网盘(Baidu Drive, pan.baidu.com)文件管理 — 上传、下载、转存、分享、搜索、移动、复制、重命名、创建文件夹、删除（高风险，需用户确认）。 同时支持 ",
-   "source": "ClawHub",
-   "source_url": "https://clawhub.ai/wscats/skills/baidu-netdisk-skills",
-   "metric_label": "下载量",
-   "metric": 23141,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/wscats/skills/baidu-netdisk-skills",
-     "metric_label": "下载量",
-     "metric": 23141,
-     "author": "wscats"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@zcwl/baidu-netdisk-skills",
-     "metric_label": "下载量",
-     "metric": 25985,
-     "author": "智创未来"
-    }
-   ],
-   "created_at": "2026-03-15",
-   "extra": {
-    "installs": 751,
-    "stars": 19,
-    "comments": 0,
-    "versions": 16,
-    "slug": "baidu-netdisk-skills",
-    "topics": [
-     "备份",
-     "消息",
-     "记忆"
-    ]
-   },
-   "rank": 11
-  },
-  {
-   "score": 1.0358,
-   "name": "腾讯文档 TENCENT DOCS",
-   "url": "https://clawhub.ai/liyang58/skills/tencent-docs",
-   "author": "liyang58",
-   "author_url": "https://clawhub.ai/u/liyang58",
-   "platforms": [
-    "OpenClaw",
-    "WorkBuddy"
-   ],
-   "desc": "腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及\"新建/创建/编辑/读取/查看/搜索文档\"、\"保存文件\"、\"云文档\"、\"腾讯文档\"",
-   "source": "ClawHub",
-   "source_url": "https://clawhub.ai/liyang58/skills/tencent-docs",
-   "metric_label": "下载量",
-   "metric": 20417,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/liyang58/skills/tencent-docs",
-     "metric_label": "下载量",
-     "metric": 20417,
-     "author": "liyang58"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@tencent-adm/tencent-docs",
-     "metric_label": "下载量",
-     "metric": 1953045,
-     "author": "腾讯文档团队"
-    },
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@org-b6kzcl68/tencent-docs",
-     "metric_label": "下载量",
-     "metric": 203591,
-     "author": "重庆途光网络传媒有限责任公司"
-    }
-   ],
-   "created_at": "2026-02-27",
-   "extra": {
-    "installs": 588,
-    "stars": 19,
-    "comments": 0,
-    "versions": 30,
-    "slug": "tencent-docs",
-    "topics": [
-     "Docs",
-     "知识库",
-     "文档",
-     "知识"
-    ]
-   },
-   "rank": 12
-  },
-  {
-   "score": 1.0232,
-   "name": "Wechat Article Search",
-   "url": "https://clawhub.ai/wuchubuzai2018/skills/wechat-article-search",
-   "author": "wuchubuzai2018",
-   "author_url": "https://clawhub.ai/u/wuchubuzai2018",
-   "platforms": [
-    "OpenClaw",
-    "Claude Code",
-    "Codex",
-    "Cursor"
-   ],
-   "desc": "搜索微信公众号文章技能。通过微信搜索获取文章列表，覆盖科技/AI、社会热点、财经、教育、职场等各类中文资讯；可按关键词检索并返回标题、概要、发布时间、来源公众号与链接。当用户需要查",
-   "source": "ClawHub",
-   "source_url": "https://clawhub.ai/wuchubuzai2018/skills/wechat-article-search",
-   "metric_label": "下载量",
-   "metric": 17867,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/wuchubuzai2018/skills/wechat-article-search",
-     "metric_label": "下载量",
-     "metric": 17867,
-     "author": "wuchubuzai2018"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/wuchubuzai2018/expert-skills-hub/wuchubuzai2018/expert-skills-hub/wechat-article-search",
-     "metric_label": "累计安装",
-     "metric": 1613,
-     "author": "wuchubuzai2018"
-    }
-   ],
-   "created_at": "2026-02-10",
-   "extra": {
-    "installs": 499,
-    "stars": 33,
-    "comments": 0,
-    "versions": 2,
-    "slug": "wechat-article-search",
-    "topics": [
-     "WeChat",
-     "微信"
-    ]
-   },
-   "rank": 13
-  },
-  {
-   "score": 1.0228,
-   "name": "tushare",
-   "url": "https://clawhub.ai/lidayan/skills/tushare-data",
-   "author": "lidayan",
-   "author_url": "https://clawhub.ai/u/lidayan",
-   "platforms": [
-    "OpenClaw",
-    "Claude Code",
-    "Codex",
-    "Cursor"
-   ],
-   "desc": "面向中文自然语言的 Tushare 数据研究技能。用于把“看看这只股票最近怎么样”“帮我查财报趋势”“最近哪个板块最强”“北向资金在买什么”“给我导出一份行情数据”这类请求，转成可",
-   "source": "ClawHub",
-   "source_url": "https://clawhub.ai/lidayan/skills/tushare-data",
-   "metric_label": "下载量",
-   "metric": 17785,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/lidayan/skills/tushare-data",
-     "metric_label": "下载量",
-     "metric": 17785,
-     "author": "lidayan"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/waditu-tushare/skills/waditu-tushare/skills/tushare",
-     "metric_label": "累计安装",
-     "metric": 6195,
-     "author": "waditu-tushare"
-    }
-   ],
-   "created_at": "2026-03-03",
-   "extra": {
-    "installs": 571,
-    "stars": 33,
-    "comments": 0,
-    "versions": 35,
-    "slug": "tushare-data",
-    "topics": [
-     "新闻",
-     "研究",
-     "股票",
-     "财务",
-     "财报"
-    ]
-   },
-   "rank": 14
-  },
-  {
-   "score": 1.0199,
-   "name": "News Aggregator",
-   "url": "https://clawhub.ai/httencn/skills/news-aggregator",
-   "author": "httencn",
-   "author_url": "https://clawhub.ai/u/httencn",
-   "platforms": [
-    "OpenClaw",
-    "Claude Code",
-    "Codex",
-    "Cursor"
-   ],
-   "desc": "国内外社会、科技、军事新闻汇总。自动搜索、筛选、整理新闻要点。",
-   "source": "ClawHub",
-   "source_url": "https://clawhub.ai/httencn/skills/news-aggregator",
-   "metric_label": "下载量",
-   "metric": 17255,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/httencn/skills/news-aggregator",
-     "metric_label": "下载量",
-     "metric": 17255,
-     "author": "httencn"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/cclank/news-aggregator-skill/cclank/news-aggregator-skill/news-aggregator-skill",
-     "metric_label": "累计安装",
-     "metric": 5995,
-     "author": "cclank"
-    }
-   ],
-   "created_at": "2026-02-24",
-   "extra": {
-    "installs": 591,
-    "stars": 16,
-    "comments": 0,
-    "versions": 4,
-    "slug": "news-aggregator",
-    "topics": [
-     "News",
-     "新闻",
-     "汇总"
-    ]
-   },
-   "rank": 15
-  },
-  {
-   "score": 1.0179,
-   "name": "Web Content Fetcher",
-   "url": "https://clawhub.ai/mrtommywu/skills/web-content-fetcher",
-   "author": "mrtommywu",
-   "author_url": "https://clawhub.ai/u/mrtommywu",
-   "platforms": [
-    "OpenClaw",
-    "Claude Code",
-    "Codex",
-    "Cursor"
-   ],
-   "desc": "网页内容获取工具 | 当常规爬虫被过滤时，使用替代服务获取网页内容。支持：1) r.jina.ai - 最稳定 2) markdown.new - Cloudflare 专用 3)",
-   "source": "ClawHub",
-   "source_url": "https://clawhub.ai/mrtommywu/skills/web-content-fetcher",
-   "metric_label": "下载量",
-   "metric": 16883,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/mrtommywu/skills/web-content-fetcher",
-     "metric_label": "下载量",
-     "metric": 16883,
-     "author": "mrtommywu"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/nangongwentian-fe/jay-skills/nangongwentian-fe/jay-skills/web-content-fetcher",
-     "metric_label": "累计安装",
-     "metric": 9,
-     "author": "nangongwentian-fe"
-    }
-   ],
-   "created_at": "2026-03-06",
-   "extra": {
-    "installs": 573,
-    "stars": 30,
-    "comments": 0,
-    "versions": 2,
-    "slug": "web-content-fetcher",
-    "topics": []
-   },
-   "rank": 16
-  },
-  {
-   "score": 1.0046,
-   "name": "WeChat MP CN",
-   "url": "https://clawhub.ai/guohongbin-git/skills/wechat-mp-cn",
-   "author": "guohongbin-git",
-   "author_url": "https://clawhub.ai/u/guohongbin-git",
-   "platforms": [
-    "OpenClaw",
-    "Claude Code",
-    "Codex",
-    "Cursor"
-   ],
-   "desc": "微信公众号监控 - 文章监控、阅读量追踪、舆情分析（WeChat Official Account）",
-   "source": "ClawHub",
-   "source_url": "https://clawhub.ai/guohongbin-git/skills/wechat-mp-cn",
-   "metric_label": "下载量",
-   "metric": 14666,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/guohongbin-git/skills/wechat-mp-cn",
-     "metric_label": "下载量",
-     "metric": 14666,
-     "author": "guohongbin-git"
-    },
-    {
-     "src_name": "skills.sh",
-     "url": "https://skills.sh/skills.volces.com/skills.volces.com/wechat-mp-cn",
-     "metric_label": "累计安装",
-     "metric": 289,
-     "author": "skills.volces.com"
-    }
-   ],
-   "created_at": "2026-02-19",
-   "extra": {
-    "installs": 519,
-    "stars": 47,
-    "comments": 0,
-    "versions": 1,
-    "slug": "wechat-mp-cn",
-    "topics": [
-     "WeChat",
-     "舆情分析",
-     "微信"
-    ]
-   },
-   "rank": 17
-  },
-  {
-   "score": 1.0,
-   "name": "全网新闻聚合助手",
-   "url": "https://xiaping.coze.com/skill/8ccc5b0c-3a5f-4a3b-9158-8c822927b7dd",
-   "author": "科尔沁可汗虾",
-   "author_url": "",
-   "platforms": [
-    "OpenClaw"
-   ],
-   "desc": "全网科技/金融/AI深度新闻聚合助手，一站式覆盖28+高价值信源。支持Hacker News、GitHub Trending、HuggingFace Papers、华尔街见闻、微博",
-   "source": "虾评Skill",
-   "source_url": "https://xiaping.coze.com/skill/8ccc5b0c-3a5f-4a3b-9158-8c822927b7dd",
-   "metric_label": "下载量",
-   "metric": 31921,
-   "sources": [
-    {
-     "src_name": "虾评Skill",
-     "url": "https://xiaping.coze.com/skill/8ccc5b0c-3a5f-4a3b-9158-8c822927b7dd",
-     "metric_label": "下载量",
-     "metric": 31921,
-     "author": "科尔沁可汗虾"
-    },
-    {
-     "src_name": "虾评Skill",
-     "url": "https://xiaping.coze.com/skill/430dbbd8-14ef-4754-b74c-f3b867667efe",
-     "metric_label": "下载量",
-     "metric": 11,
-     "author": "云"
-    }
-   ],
-   "created_at": "2026-03-10",
-   "extra": {
-    "avg_stars_x100": 490,
-    "star_count": 3379,
-    "comment_count": 5410,
-    "category": [
-     "资讯阅读"
-    ]
-   },
-   "rank": 18
-  },
-  {
-   "score": 1.0,
-   "name": "编程大神.Skill",
-   "url": "https://www.skillhub.cn/skills/@ake/dev-god",
-   "author": "阿客实验室",
-   "author_url": "",
-   "platforms": [
-    "WorkBuddy"
-   ],
-   "desc": "【全栈能力】编程大神.Skill：面向复杂真实项目的高阶全栈编程助手。不止生成代码，而是从一句目标接手陌生代码库，拆解需求、补齐实现、追到根因、完成重构、联调前后端，并把结果推进到",
-   "source": "SkillHub",
-   "source_url": "https://www.skillhub.cn/skills/@ake/dev-god",
-   "metric_label": "下载量",
-   "metric": 9393080,
-   "sources": [
-    {
-     "src_name": "SkillHub",
-     "url": "https://www.skillhub.cn/skills/@ake/dev-god",
-     "metric_label": "下载量",
-     "metric": 9393080,
-     "author": "阿客实验室"
-    }
-   ],
-   "created_at": "2026-10-07",
-   "extra": {
-    "stars": 41,
-    "installs": 0,
-    "score": 100000,
-    "category": "dev-programming",
-    "upstream_url": null,
-    "canonical": "@ake/dev-god",
-    "homepage": "https://api.skillhub.cn/ake/dev-god"
-   },
-   "rank": 19
-  },
-  {
-   "score": 1.0,
-   "name": "Skill Finder Cn",
-   "url": "https://clawhub.ai/guohongbin-git/skills/skill-finder-cn",
-   "author": "guohongbin-git",
-   "author_url": "https://clawhub.ai/u/guohongbin-git",
-   "platforms": [
-    "OpenClaw"
-   ],
-   "desc": "Skill 查找器 | Skill Finder. 帮助发现和安装 ClawHub Skills | Discover and install ClawHub Skills. 回答",
-   "source": "ClawHub",
-   "source_url": "https://clawhub.ai/guohongbin-git/skills/skill-finder-cn",
-   "metric_label": "下载量",
-   "metric": 40334,
-   "sources": [
-    {
-     "src_name": "ClawHub",
-     "url": "https://clawhub.ai/guohongbin-git/skills/skill-finder-cn",
-     "metric_label": "下载量",
-     "metric": 40334,
-     "author": "guohongbin-git"
-    }
-   ],
-   "created_at": "2026-02-17",
-   "extra": {
-    "installs": 1339,
-    "stars": 133,
-    "comments": 0,
-    "versions": 2,
-    "slug": "skill-finder-cn",
-    "topics": []
-   },
-   "rank": 20
-  }
- ],
- "apps": [
-  {
-   "score": 1.0,
-   "name": "Jake（幽默美国男生）",
-   "url": "https://www.coze.cn/store/agent/7402125016739627023",
-   "author": "",
-   "author_url": "",
-   "platforms": [
-    "扣子 智能体"
-   ],
-   "desc": "Stanford grad at Google, here to help you sound like a native English speaker",
-   "source": "扣子商店",
-   "source_url": "https://www.coze.cn/store/agent/7402125016739627023",
-   "metric_label": "用户数",
-   "metric": 12179545,
-   "sources": [
-    {
-     "src_name": "扣子商店",
-     "url": "https://www.coze.cn/store/agent/7402125016739627023",
-     "metric_label": "用户数",
-     "metric": 12179545,
-     "author": ""
-    }
-   ],
-   "created_at": "2024-10-09",
-   "extra": {
-    "heat": 2,
-    "favorite_count": 239,
-    "conversations": 559813054,
-    "is_official": false,
-    "enterprise_label": false,
-    "category": "学习教育",
-    "entity_type": 1
-   },
-   "alive": true,
+   "created_at": "2026-10-21",
+   "found_at": "2026-10-26",
    "checked": "10-26",
-   "rank": 1
-  },
-  {
-   "score": 0.9475,
-   "name": "AiLoft",
-   "url": "https://ailoft.net",
-   "author": "songtianlun",
-   "author_url": "https://www.v2ex.com/member/songtianlun",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：大家帮忙看看 AiLoft 这个作为 AI 生图工具怎么样？",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1178517",
-   "metric_label": "浏览",
-   "metric": 6409,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://ailoft.net",
-     "metric_label": "浏览",
-     "metric": 6409,
-     "author": "songtianlun"
-    }
-   ],
-   "created_at": "2025-12-12",
-   "extra": {
-    "views": 6409,
-    "post": "https://www.v2ex.com/t/1178517",
-    "links": [
-     "https://ailoft.net"
-    ]
+   "score": 90,
+   "week": "2026-10-26",
+   "why": "只盯一件事：你每个月被多少订阅自动扣钱。合租分摊和「余额还能续几个月」这两个细节，是真有人在用才会想到的。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 1,
+    "verifiable": 2
    },
-   "alive": true,
-   "checked": "10-26",
-   "rank": 2
+   "dim_total": 10
   },
   {
-   "score": 0.9223,
-   "name": "X 的第三方客户端",
-   "url": "https://testflight.apple.com/join/MtRpthjp",
-   "author": "ilobobob",
-   "author_url": "https://www.v2ex.com/member/ilobobob",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：做了一个 X 的第三方客户端， Liquid Glass，全流程翻译",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1249743",
-   "metric_label": "浏览",
-   "metric": 5079,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://testflight.apple.com/join/MtRpthjp",
-     "metric_label": "浏览",
-     "metric": 5079,
-     "author": "ilobobob"
-    }
-   ],
-   "created_at": "2026-10-18",
-   "extra": {
-    "views": 5079,
-    "post": "https://www.v2ex.com/t/1249743",
-    "links": [
-     "https://testflight.apple.com/join/MtRpthjp",
-     "https://i.ibb.co/8qGxJbh/Picsew-20261018124046.png"
-    ]
+   "name": "Poly Council 10",
+   "url": "https://trends.polyhelper.ai/markets",
+   "final_url": "https://trends.polyhelper.ai/markets/",
+   "source_url": "https://github.com/vadimchernets/poly-council-10",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "vadimchernets",
+   "author_url": "https://github.com/vadimchernets",
+   "author_type": "individual",
+   "desc": "每个交易日开盘前，九个 AI 模型各自给出对 S&P 500 等市场的判断，封存后按收盘结果打分，历史全公开。",
+   "title": "AI stock market forecast today: S&P 500, gold, oil, Bitcoin",
+   "meta": "Before the New York open, the world’s leading AIs say what they would do with each of 12 key markets if it were their own virtual money. Every forecast is sealed before it starts counting, so no one c",
+   "lang": "en",
+   "industry": "金融投研",
+   "has_ui": true,
+   "traction": false,
+   "signals": {
+    "stars": 0,
+    "forks": 0,
+    "topics": [
+     "ai",
+     "dataset",
+     "forecasting",
+     "llm",
+     "markets"
+    ],
+    "language": "JavaScript"
    },
-   "alive": true,
+   "created_at": "2026-10-19",
+   "found_at": "2026-10-26",
    "checked": "10-26",
-   "rank": 3
-  },
-  {
-   "score": 0.8556,
-   "name": "Today",
-   "url": "https://apps.apple.com/app/apple-store/id6810217203?pt=129430776&amp;ct=v2ex&amp;mt=8",
-   "author": "AONIR",
-   "author_url": "https://www.v2ex.com/member/AONIR",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：做了个 Mac 小工具，在屏幕边上看 Codex / Claude Code 还剩多少额度",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1251299",
-   "metric_label": "浏览",
-   "metric": 2740,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://apps.apple.com/app/apple-store/id6810217203?pt=129430776&amp;ct=v2ex&amp;mt=8",
-     "metric_label": "浏览",
-     "metric": 2740,
-     "author": "AONIR"
-    }
-   ],
-   "created_at": "2026-10-23",
-   "extra": {
-    "views": 2740,
-    "post": "https://www.v2ex.com/t/1251299",
-    "links": [
-     "https://apps.apple.com/app/apple-store/id6810217203?pt=129430776&amp;ct=v2ex&amp;mt=8",
-     "https://apps.apple.com/app/apple-store/id6810217203?pt=129430776&ct=v2ex&mt=8"
-    ]
+   "score": 70,
+   "week": "2026-10-26",
+   "why": "不是又一个「AI 荐股」，而是把九个模型的预判先封存、再对账、再记分——它在公开回答「AI 到底会不会看盘」这个问题。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 2,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
    },
-   "alive": true,
-   "checked": "10-26",
-   "rank": 4
+   "dim_total": 10
   },
   {
-   "score": 0.8438,
+   "name": "高性价比体检筛查指南",
+   "url": "https://kexin1409.github.io/how-to-check-better",
+   "final_url": "https://kexin1409.github.io/how-to-check-better/",
+   "source_url": "https://github.com/kexin1409/how-to-check-better",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "kexin1409",
+   "author_url": "https://github.com/kexin1409",
+   "author_type": "individual",
+   "desc": "144 条体检建议，以国家癌症中心六大癌症筛查方法和 USPSTF 分级为骨架：哪些检查真能降低死亡率，哪些是过度检查。",
+   "title": "高性价比体检筛查指南",
+   "meta": "体检筛查指南：144 条建议，以国家癌症中心六大癌症筛查方法与 USPSTF（2024）分级建议为骨架，并补充 PLCO 等大型筛查试验结论，覆盖什么才叫有效筛查、最值钱的四个基础指标、肿瘤标志物为何不推荐筛查、真正降低死亡率的影像与内镜、不推荐普筛的过度诊断重灾区，以及高端体检与基因检测的智商税清单。每条写明成本、收益、证据等级、风险等级和原始出处。",
+   "lang": "zh",
+   "industry": "医疗健康",
+   "has_ui": true,
+   "traction": false,
+   "signals": {
+    "stars": 0,
+    "forks": 0,
+    "topics": [],
+    "language": "HTML"
+   },
+   "created_at": "2026-10-20",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "体检套餐是卖的，这页是按证据分级的。它回答的是「哪项不用做」，这恰恰是没人愿意告诉你的。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
+   },
+   "dim_total": 9
+  },
+  {
+   "name": "Dovepass",
+   "url": "https://dovepass.com",
+   "final_url": "",
+   "source_url": "https://news.ycombinator.com/item?id=50156779",
+   "src": "hn",
+   "src_name": "Show HN",
+   "also": [],
+   "author": "nimitmehra",
+   "author_url": "https://news.ycombinator.com/user?id=nimitmehra",
+   "author_type": "individual",
+   "desc": "在地图上画一条无人机航线，告诉你在旧金山沿这条线飞合不合法。",
+   "title": "Dovepass",
+   "meta": "",
+   "lang": "en",
+   "industry": "法律合规",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
+    "points": 33,
+    "comments": 9
+   },
+   "created_at": "2026-10-19",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "法规查询做成了「画一条线就有答案」。把空域规则落到一条具体航线上，是法律类工具里少见的具体。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 2,
+    "wild": 2,
+    "used": 1,
+    "verifiable": 2
+   },
+   "dim_total": 11
+  },
+  {
+   "name": "人间防骗指南",
+   "url": "https://qerssd.github.io/HowToAvoidScams",
+   "final_url": "https://qerssd.github.io/HowToAvoidScams/",
+   "source_url": "https://github.com/QERSSD/HowToAvoidScams",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "QERSSD",
+   "author_url": "https://github.com/QERSSD",
+   "author_type": "individual",
+   "desc": "373 个真实骗局逐个拆解：套路分几步、坑在哪、谁能一眼识破。附自查清单、PDF/EPUB/Anki 下载和 12 局防骗小游戏。",
+   "title": "人间防骗指南",
+   "meta": "373 个真实骗局逐个拆解：套路分几步、坑在哪、会损失什么、谁能一眼识破。左侧三级目录直接跳转，离线单文件，双击即开。",
+   "lang": "zh",
+   "industry": "教育学习",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
+    "stars": 102,
+    "forks": 9,
+    "topics": [
+     "anti-fraud",
+     "anti-scam",
+     "chinese",
+     "scam-awareness",
+     "security",
+     "self-improvement"
+    ],
+    "language": "HTML"
+   },
+   "created_at": "2026-10-19",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 90,
+   "week": "2026-10-26",
+   "why": "防骗内容到处有，把它做成能练的——有自查清单、有 Anki 卡、有小游戏——的很少。给家里长辈的那种。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 2,
+    "verifiable": 2
+   },
+   "dim_total": 11
+  },
+  {
    "name": "刘春霖 AI 小楷书房",
-   "url": "https://dvbs2000.github.io/liuchunlin-shufa/",
+   "url": "https://dvbs2000.github.io/liuchunlin-shufa",
+   "final_url": "https://dvbs2000.github.io/liuchunlin-shufa/",
+   "source_url": "https://www.v2ex.com/t/1251592",
+   "src": "v2ex",
+   "src_name": "V2EX 分享创造",
+   "also": [],
    "author": "dvbs2000",
    "author_url": "https://www.v2ex.com/member/dvbs2000",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：用 ai 实现书法作品自动生成",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1251592",
-   "metric_label": "浏览",
-   "metric": 2456,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://dvbs2000.github.io/liuchunlin-shufa/",
-     "metric_label": "浏览",
-     "metric": 2456,
-     "author": "dvbs2000"
-    }
-   ],
+   "author_type": "individual",
+   "desc": "让 AI 学一本真实的小楷字帖的字形结构，然后生成任意文字的书法作品；同字异形轮换、部件级拼合。",
+   "title": "刘春霖 AI 小楷书房",
+   "meta": "",
+   "lang": "zh",
+   "industry": "教育学习",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
+    "views": 2536,
+    "replies": 18
+   },
    "created_at": "2026-10-25",
-   "extra": {
-    "views": 2456,
-    "post": "https://www.v2ex.com/t/1251592",
-    "links": [
-     "https://dvbs2000.github.io/liuchunlin-shufa/",
-     "https://github.com/dvbs2000/liuchunlin-shufa"
-    ]
-   },
-   "alive": true,
+   "found_at": "2026-10-26",
    "checked": "10-26",
-   "rank": 5
+   "score": 90,
+   "week": "2026-10-26",
+   "why": "不是「书法字体」，是拿一本具体的字帖训出来的：你输入的每个字都按刘春霖的结构长出来。书法和 AI 第一次这么接。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 2,
+    "wild": 2,
+    "used": 1,
+    "verifiable": 2
+   },
+   "dim_total": 11
   },
   {
-   "score": 0.8436,
-   "name": "流量喵 FlowCat",
-   "url": "https://tab16360.github.io/flowcat/",
-   "author": "tab16360",
-   "author_url": "https://www.v2ex.com/member/tab16360",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：[开源] AI 工具越装越多，你的 SSD 谁在偷偷读写？给 [流量喵] 加了磁盘监控",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1249859",
-   "metric_label": "浏览",
-   "metric": 2451,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://tab16360.github.io/flowcat/",
-     "metric_label": "浏览",
-     "metric": 2451,
-     "author": "tab16360"
-    }
-   ],
+   "name": "麦麦一起点",
+   "url": "https://littlebordercollie.github.io/mcd-together-order",
+   "final_url": "https://littlebordercollie.github.io/mcd-together-order/",
+   "source_url": "https://github.com/littlebordercollie/mcd-together-order",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "littlebordercollie",
+   "author_url": "https://github.com/littlebordercollie",
+   "author_type": "individual",
+   "desc": "面向培智学校学生：孩子用图片和语音慢慢选自己想吃的，家长接着核对和下单。基于麦当劳中国 MCP 的点餐沟通原型。",
+   "title": "麦麦一起点",
+   "meta": "麦麦一起点：孩子用图片和语音慢慢选，家长接着核对和购买。面向培智学校学生及陪伴者的点餐沟通原型。",
+   "lang": "zh",
+   "industry": "教育学习",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
+    "stars": 101,
+    "forks": 0,
+    "topics": [
+     "accessibility",
+     "mcp",
+     "special-education"
+    ],
+    "language": "JavaScript"
+   },
    "created_at": "2026-10-19",
-   "extra": {
-    "views": 2451,
-    "post": "https://www.v2ex.com/t/1249859",
-    "links": [
-     "https://tab16360.github.io/flowcat/",
-     "https://github.com/tab16360/flowcat",
-     "https://tab16360.github.io/flowcat/assets/disk-io.png"
-    ]
-   },
-   "alive": true,
+   "found_at": "2026-10-26",
    "checked": "10-26",
-   "rank": 6
+   "score": 90,
+   "week": "2026-10-26",
+   "why": "同一个麦当劳接口，别人拿来比价，这位拿来给培智学生做「自己点一次餐」的练习。技术一样，看见的人不一样。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 2,
+    "wild": 2,
+    "used": 2,
+    "verifiable": 2
+   },
+   "dim_total": 12
   },
   {
-   "score": 0.824,
-   "name": "把不同 Coding Agent 的对话记录实时同步到网上",
-   "url": "https://github.com/jieliapp/plugins",
-   "author": "buru",
-   "author_url": "https://www.v2ex.com/member/buru",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：分享一个小工具，把不同 Coding Agent 的对话记录实时同步到网上，方便自己浏览和分享给同事",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1220299",
-   "metric_label": "浏览",
-   "metric": 2044,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://github.com/jieliapp/plugins",
-     "metric_label": "浏览",
-     "metric": 2044,
-     "author": "buru"
-    }
-   ],
-   "created_at": "2026-06-14",
-   "extra": {
-    "views": 2044,
-    "post": "https://www.v2ex.com/t/1220299",
-    "links": [
-     "https://github.com/jieliapp/plugins",
-     "https://cdn.jieli.app/assets/profile-card.jpg"
-    ]
+   "name": "志愿星",
+   "url": "https://zhiyuanxing.pages.dev",
+   "final_url": "",
+   "source_url": "https://github.com/tomlen045/zhiyuanxing",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "tomlen045",
+   "author_url": "https://github.com/tomlen045",
+   "author_type": "individual",
+   "desc": "高考志愿填报分析：按位次锚定冲稳保推荐、提分 ROI 规划、就业百科。广东 2022–2026 全量真实数据。",
+   "title": "志愿星",
+   "meta": "",
+   "lang": "zh",
+   "industry": "教育学习",
+   "has_ui": true,
+   "traction": false,
+   "signals": {
+    "stars": 0,
+    "forks": 0,
+    "topics": [
+     "chinese",
+     "cloudflare-pages",
+     "education",
+     "gaokao",
+     "mysql",
+     "recommendation-engine"
+    ],
+    "language": "Python"
    },
-   "alive": true,
-   "checked": "10-26",
-   "rank": 7
-  },
-  {
-   "score": 0.8215,
-   "name": "DbCat",
-   "url": "https://dbcat.forzens.com",
-   "author": "forzen",
-   "author_url": "https://www.v2ex.com/member/forzen",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：用 Rust 写了个数据库客户端 DbCat，大部分代码是 AI 写的",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1250369",
-   "metric_label": "浏览",
-   "metric": 1997,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://dbcat.forzens.com",
-     "metric_label": "浏览",
-     "metric": 1997,
-     "author": "forzen"
-    }
-   ],
-   "created_at": "2026-10-20",
-   "extra": {
-    "views": 1997,
-    "post": "https://www.v2ex.com/t/1250369",
-    "links": [
-     "https://dbcat.forzens.com",
-     "https://dbcat.forzens.com/_astro/data-grid.XWIgVazc_Z1U3Kb3.webp",
-     "https://dbcat.forzens.com/_astro/clickhouse-structure.CcdJZqqs_1G9rWW.webp"
-    ]
-   },
-   "alive": true,
-   "checked": "10-26",
-   "rank": 8
-  },
-  {
-   "score": 0.8205,
-   "name": "Tervia",
-   "url": "https://github.com/murongg/Tervia",
-   "author": "murongxdb",
-   "author_url": "https://www.v2ex.com/member/murongxdb",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：[开源] AI Coding 时代，也许真不用再打开 VS Code、IDEA 了",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1250064",
-   "metric_label": "浏览",
-   "metric": 1980,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://github.com/murongg/Tervia",
-     "metric_label": "浏览",
-     "metric": 1980,
-     "author": "murongxdb"
-    }
-   ],
-   "created_at": "2026-10-19",
-   "extra": {
-    "views": 1980,
-    "post": "https://www.v2ex.com/t/1250064",
-    "links": [
-     "https://github.com/murongg/Tervia",
-     "https://i.v2ex.co/5Um6n247.jpeg",
-     "https://i.v2ex.co/gU1k0Nm3.jpeg",
-     "https://i.v2ex.co/vzLY93zs.jpeg"
-    ]
-   },
-   "alive": true,
-   "checked": "10-26",
-   "rank": 9
-  },
-  {
-   "score": 0.8054,
-   "name": "旅途小助手（行程规划）",
-   "url": "https://www.coze.cn/store/agent/7363203787265720374",
-   "author": "",
-   "author_url": "",
-   "platforms": [
-    "扣子 智能体"
-   ],
-   "desc": "🌍 一个为您量身定制旅行计划的智能助手，只需输入旅行地点和天数，便能获得详尽的日程安排和美食推荐。让您的旅途轻松愉快，探索更多可能！🗓🍴✈️",
-   "source": "扣子商店",
-   "source_url": "https://www.coze.cn/store/agent/7363203787265720374",
-   "metric_label": "用户数",
-   "metric": 508935,
-   "sources": [
-    {
-     "src_name": "扣子商店",
-     "url": "https://www.coze.cn/store/agent/7363203787265720374",
-     "metric_label": "用户数",
-     "metric": 508935,
-     "author": ""
-    }
-   ],
-   "created_at": "2024-08-08",
-   "extra": {
-    "heat": 44,
-    "favorite_count": 3004,
-    "conversations": 1648104,
-    "is_official": false,
-    "enterprise_label": false,
-    "category": "效率工具",
-    "entity_type": 1
-   },
-   "alive": true,
-   "checked": "10-26",
-   "rank": 10
-  },
-  {
-   "score": 0.7755,
-   "name": "开局避难所：生存100天测试",
-   "url": "https://www.taptap.cn/app/982855",
-   "author": "xiaofu0",
-   "author_url": "https://www.v2ex.com/member/xiaofu0",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：我和孩子一起使用 AI 做的游戏上线到 taptap 了",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1250279",
-   "metric_label": "浏览",
-   "metric": 1305,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://www.taptap.cn/app/982855",
-     "metric_label": "浏览",
-     "metric": 1305,
-     "author": "xiaofu0"
-    }
-   ],
-   "created_at": "2026-10-20",
-   "extra": {
-    "views": 1305,
-    "post": "https://www.v2ex.com/t/1250279",
-    "links": [
-     "https://www.taptap.cn/app/982855"
-    ]
-   },
-   "alive": true,
-   "checked": "10-26",
-   "rank": 11
-  },
-  {
-   "score": 0.7753,
-   "name": "在线 AI 图片工具：图片变清晰、抠图、放大与生图",
-   "url": "https://pimg.ai/zh",
-   "author": "yuanfangyushi22",
-   "author_url": "https://www.v2ex.com/member/yuanfangyushi22",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：即将失业的大龄程序员开始折腾出海了，最近做了个 AI 图片工具，感觉颜值还行，本帖评论送积分",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1250831",
-   "metric_label": "浏览",
-   "metric": 1303,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://pimg.ai/zh",
-     "metric_label": "浏览",
-     "metric": 1303,
-     "author": "yuanfangyushi22"
-    }
-   ],
-   "created_at": "2026-10-22",
-   "extra": {
-    "views": 1303,
-    "post": "https://www.v2ex.com/t/1250831",
-    "links": [
-     "https://pimg.ai/zh"
-    ]
-   },
-   "alive": true,
-   "checked": "10-26",
-   "rank": 12
-  },
-  {
-   "score": 0.7738,
-   "name": "antumi",
-   "url": "https://github.com/flyhero/antumi",
-   "author": "iflyapi",
-   "author_url": "https://www.v2ex.com/member/iflyapi",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：开源自用的多 Agent 桌面工作台， Agent 放一起管，订阅额度一点不浪费",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1250538",
-   "metric_label": "浏览",
-   "metric": 1285,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://github.com/flyhero/antumi",
-     "metric_label": "浏览",
-     "metric": 1285,
-     "author": "iflyapi"
-    }
-   ],
    "created_at": "2026-10-21",
-   "extra": {
-    "views": 1285,
-    "post": "https://www.v2ex.com/t/1250538",
-    "links": [
-     "https://github.com/flyhero/antumi",
-     "https://github.com/flyhero/antumi/releases",
-     "https://raw.githubusercontent.com/flyhero/antumi/v0.19.3/docs/assets/hero.png",
-     "https://raw.githubusercontent.com/flyhero/antumi/v0.19.3/docs/assets/features/handoff.webp",
-     "https://raw.githubusercontent.com/flyhero/antumi/v0.19.3/docs/assets/features/quota.webp"
-    ]
-   },
-   "alive": true,
+   "found_at": "2026-10-26",
    "checked": "10-26",
-   "rank": 13
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "志愿填报工具大多卖课，这个把一个省五年的真实录取数据和「再提多少分能换哪所学校」的账直接摊开。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
+   },
+   "dim_total": 9
   },
   {
-   "score": 0.7679,
-   "name": "dtool",
-   "url": "https://github.com/dezhishen/dtool",
-   "author": "THESDZ",
-   "author_url": "https://www.v2ex.com/member/THESDZ",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：dtool v0.3.0 发布：面向 AI 的数据工作流，从 Excel 起步，规矩立好了，不烧心",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1250037",
-   "metric_label": "浏览",
-   "metric": 1216,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://github.com/dezhishen/dtool",
-     "metric_label": "浏览",
-     "metric": 1216,
-     "author": "THESDZ"
-    }
-   ],
+   "name": "简历定制助手 Pro",
+   "url": "https://zzy-six.github.io/resume-tailor-app",
+   "final_url": "https://zzy-six.github.io/resume-tailor-app/",
+   "source_url": "https://github.com/Zzy-six/resume-tailor-app",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "Zzy-six",
+   "author_url": "https://github.com/Zzy-six",
+   "author_type": "individual",
+   "desc": "上传简历和招聘要求（图片或文档都行），自动识别岗位方向、分析技术栈匹配，免 Key 本地 AI 重写成定制简历。",
+   "title": "简历定制助手 Pro",
+   "meta": "上传简历与招聘要求，自动识别岗位方向并生成突出技术栈的定制简历。支持本地文件、图片 OCR、无 Key 本地 AI 重写。",
+   "lang": "zh",
+   "industry": "办公效率",
+   "has_ui": true,
+   "traction": false,
+   "signals": {
+    "stars": 0,
+    "forks": 0,
+    "topics": [],
+    "language": "HTML"
+   },
+   "created_at": "2026-10-24",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "投一个岗改一版简历是最烦的活。这个把「招聘截图 → 匹配分析 → 改好的简历」做成一步，还不要 API Key。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
+   },
+   "dim_total": 9
+  },
+  {
+   "name": "VibeSheet 表格助手",
+   "url": "https://x-vibe.cn/chat-sheet",
+   "final_url": "https://www.x-vibe.cn/chat-sheet",
+   "source_url": "https://github.com/ActivePeter/ChatSheet-AI-Excel-Assistant",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "ActivePeter",
+   "author_url": "https://github.com/ActivePeter",
+   "author_type": "individual",
+   "desc": "上传 Excel/CSV，用一句话完成汇总、清洗、多表匹配、透视、图表和导出，版本可回退。",
+   "title": "VibeSheet",
+   "meta": "",
+   "lang": "zh",
+   "industry": "办公效率",
+   "has_ui": true,
+   "traction": false,
+   "signals": {
+    "stars": 0,
+    "forks": 0,
+    "topics": [
+     "ai",
+     "ai-assistant",
+     "chatexcel",
+     "chinese",
+     "csv",
+     "data-analysis",
+     "excel",
+     "excel-automation"
+    ],
+    "language": null
+   },
    "created_at": "2026-10-19",
-   "extra": {
-    "views": 1216,
-    "post": "https://www.v2ex.com/t/1250037",
-    "links": [
-     "https://github.com/dezhishen/dtool",
-     "https://api.github.com/repos/dezhishen/dtool/releases/latest",
-     "https://github.com/dezhishen/dtool/releases/download/$V"
-    ]
-   },
-   "alive": true,
+   "found_at": "2026-10-26",
    "checked": "10-26",
-   "rank": 14
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "Excel 里最费人的是 VLOOKUP 和透视表，这个让你用一句话说，而且每一步都能退回去——敢退回去才敢交给 AI。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
+   },
+   "dim_total": 9
   },
   {
-   "score": 0.7668,
+   "name": "PDF 涂黑检查器",
+   "url": "https://blurdata.app/redaction-checker",
+   "final_url": "",
+   "source_url": "https://news.ycombinator.com/item?id=50150966",
+   "src": "hn",
+   "src_name": "Show HN",
+   "also": [],
+   "author": "iyia",
+   "author_url": "https://news.ycombinator.com/user?id=iyia",
+   "author_type": "individual",
+   "desc": "拖一份做过涂黑处理的 PDF 进去，看黑条底下的文字是不是还在。免费，全程在浏览器里跑，文件不上传。",
+   "title": "Is Your Redaction Real? Free PDF Redaction Checker",
+   "meta": "Drop a redacted PDF and see if text is still hidden under the black boxes. Free, runs entirely in your browser, and your file is never uploaded.",
+   "lang": "en",
+   "industry": "办公效率",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
+    "points": 3,
+    "comments": 0
+   },
+   "created_at": "2026-10-19",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "很多「涂黑」只是盖了个黑框，文字还在底下。这个工具只做一件事：告诉你你的涂黑是不是假的。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 2,
+    "wild": 2,
+    "used": 1,
+    "verifiable": 2
+   },
+   "dim_total": 11
+  },
+  {
+   "name": "Pika Clean",
+   "url": "https://pikaclean.daoly.top",
+   "final_url": "",
+   "source_url": "https://github.com/black-robe-sanfeng/pika-clean",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "black-robe-sanfeng",
+   "author_url": "https://github.com/black-robe-sanfeng",
+   "author_type": "individual",
+   "desc": "开源的 Mac 清理工具：清理、卸载、菜单栏监控，删每个文件之前先用 AI 告诉你它是什么、能不能删。",
+   "title": "Pika Clean",
+   "meta": "Pika Clean：仅支持 macOS 的 Mac 清理、卸载、优化与菜单栏监控，用 AI 解释每个文件能不能删。",
+   "lang": "zh",
+   "industry": "办公效率",
+   "has_ui": true,
+   "traction": false,
+   "signals": {
+    "stars": 0,
+    "forks": 0,
+    "topics": [
+     "ai",
+     "cleaner",
+     "disk-cleaner",
+     "mac",
+     "macos",
+     "menubar",
+     "open-source",
+     "react"
+    ],
+    "language": "Rust"
+   },
+   "created_at": "2026-10-26",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "清理软件都敢删，这个先解释。「这个 2GB 的缓存是什么」有人替你讲一句，才敢按删除。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
+   },
+   "dim_total": 9
+  },
+  {
+   "name": "门店美术陈列助手",
+   "url": "https://pyq-zhishuan.github.io/wanjia-display-assistant",
+   "final_url": "https://pyq-zhishuan.github.io/wanjia-display-assistant/",
+   "source_url": "https://github.com/PYQ-Zhishuan/wanjia-display-assistant",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "PYQ-Zhishuan",
+   "author_url": "https://github.com/PYQ-Zhishuan",
+   "author_type": "individual",
+   "desc": "选商品外形、拖动大小、按参考图试摆，给门店做陈列方案。离线可用的演示原型。",
+   "title": "门店美术陈列助手",
+   "meta": "",
+   "lang": "zh",
+   "industry": "电商营销",
+   "has_ui": true,
+   "traction": false,
+   "signals": {
+    "stars": 0,
+    "forks": 0,
+    "topics": [],
+    "language": "HTML"
+   },
+   "created_at": "2026-10-24",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "线下门店陈列这个活几乎没有工具，这是给店员的「先在屏幕上摆一遍」。行业很小，但它是第一个。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 2,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
+   },
+   "dim_total": 10
+  },
+  {
    "name": "人味",
    "url": "https://renwei.yinghuo.fun",
+   "final_url": "",
+   "source_url": "https://www.v2ex.com/t/1250804",
+   "src": "v2ex",
+   "src_name": "V2EX 分享创造",
+   "also": [],
    "author": "Hooki",
    "author_url": "https://www.v2ex.com/member/Hooki",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：[娱乐] 做了一个评价网站 AI 感的网站，可以相互打分",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1250804",
-   "metric_label": "浏览",
-   "metric": 1204,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://renwei.yinghuo.fun",
-     "metric_label": "浏览",
-     "metric": 1204,
-     "author": "Hooki"
-    }
-   ],
+   "author_type": "individual",
+   "desc": "晒作品、聊设计的作品观察站：支持自评和互评，后台接入模型自动打「人味」分，寻找 AI 之外属于自己的味道。",
+   "title": "人味",
+   "meta": "一个认真玩、不端着的作品观察站。晒作品，聊设计，寻找 AI 之外属于自己的味道。",
+   "lang": "zh",
+   "industry": "内容创作",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
+    "views": 1210,
+    "replies": 12
+   },
    "created_at": "2026-10-22",
-   "extra": {
-    "views": 1204,
-    "post": "https://www.v2ex.com/t/1250804",
-    "links": [
-     "https://renwei.yinghuo.fun"
-    ]
-   },
-   "alive": true,
+   "found_at": "2026-10-26",
    "checked": "10-26",
-   "rank": 15
+   "score": 90,
+   "week": "2026-10-26",
+   "why": "大家都在说「去 AI 味」，这个站把「人味」做成了可以打分、可以互评的东西。做内容的人迟早会需要这把尺子。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 2,
+    "wild": 2,
+    "used": 1,
+    "verifiable": 2
+   },
+   "dim_total": 11
   },
   {
-   "score": 0.7604,
-   "name": "秒剪短视频",
-   "url": "https://www.coze.cn/store/project/7490731400874901519",
-   "author": "",
-   "author_url": "",
-   "platforms": [
-    "扣子 应用"
-   ],
-   "desc": "💥一站式爆款短视频创作，丰富工作量模板一键复制",
-   "source": "扣子商店",
-   "source_url": "https://www.coze.cn/store/project/7490731400874901519",
-   "metric_label": "用户数",
-   "metric": 244235,
-   "sources": [
-    {
-     "src_name": "扣子商店",
-     "url": "https://www.coze.cn/store/project/7490731400874901519",
-     "metric_label": "用户数",
-     "metric": 244235,
-     "author": ""
-    }
-   ],
-   "created_at": "2026-10-21",
-   "extra": {
-    "heat": 792,
-    "favorite_count": 7170,
-    "conversations": null,
-    "is_official": false,
-    "enterprise_label": false,
-    "category": "图像与音视频",
-    "entity_type": 6
+   "name": "AI 情报站",
+   "url": "https://lab.ytdeepsea.com/radar",
+   "final_url": "https://lab.ytdeepsea.com/radar/",
+   "source_url": "https://github.com/garycaogan/intel-radar",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "garycaogan",
+   "author_url": "https://github.com/garycaogan",
+   "author_type": "individual",
+   "desc": "每天早上自动扫一遍 B 站、YouTube、抖音、TikTok、小红书、X 和 GitHub，挑出 AI 和 AI 视频圈当天冒头的题材、热议和新工具，出一页日报。",
+   "title": "AI 情报站",
+   "meta": "每天早上自动扫一遍 B 站、YouTube、抖音、TikTok、小红书、X 和 GitHub，挑出 AI 和 AI 视频圈当天冒头的题材、热议和新工具，告诉你哪些值得马上测。",
+   "lang": "zh",
+   "industry": "内容创作",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
+    "stars": 45,
+    "forks": 23,
+    "topics": [],
+    "language": "Python"
    },
-   "alive": true,
+   "created_at": "2026-10-24",
+   "found_at": "2026-10-26",
    "checked": "10-26",
-   "rank": 16
+   "score": 90,
+   "week": "2026-10-26",
+   "why": "做 AI 内容的人每天要刷七个平台找选题，这个人把这件事写成了脚本并公开了。选题雷达，野生版。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 1,
+    "verifiable": 2
+   },
+   "dim_total": 10
   },
   {
-   "score": 0.7575,
-   "name": "麦麦精算师",
-   "url": "https://github.com/qinruimac/mcd-smart-spender",
-   "author": "d5n",
-   "author_url": "https://www.v2ex.com/member/d5n",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：做了个麦当劳 MCP 省钱助手「麦麦精算师」，一句话帮你算出最省点餐方案",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1251253",
-   "metric_label": "浏览",
-   "metric": 1105,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://github.com/qinruimac/mcd-smart-spender",
-     "metric_label": "浏览",
-     "metric": 1105,
-     "author": "d5n"
-    }
-   ],
-   "created_at": "2026-10-23",
-   "extra": {
-    "views": 1105,
-    "post": "https://www.v2ex.com/t/1251253",
-    "links": [
-     "https://github.com/qinruimac/mcd-smart-spender",
-     "http://mcd_smart_spender.py"
-    ]
+   "name": "a2md",
+   "url": "https://a2md.my",
+   "final_url": "",
+   "source_url": "https://www.v2ex.com/t/1251047",
+   "src": "v2ex",
+   "src_name": "V2EX 分享创造",
+   "also": [],
+   "author": "X1lyS",
+   "author_url": "https://www.v2ex.com/member/X1lyS",
+   "author_type": "individual",
+   "desc": "粘贴 B 站、YouTube、抖音、快手、小红书链接，或上传本地音视频，一键转成带时间戳的转写稿和结构化 AI 笔记，可出思维导图。",
+   "title": "a2md",
+   "meta": "a2md 把 B站、YouTube、抖音、快手、小红书视频或本地音视频，一键转成带时间戳的转写稿与结构化 AI 学习笔记；支持思维导图、知识库、导出分享，并提供 REST API 与 Claude Code/Codex Agent Skill。",
+   "lang": "zh",
+   "industry": "内容创作",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
+    "views": 665,
+    "replies": 0
    },
-   "alive": true,
+   "created_at": "2026-10-22",
+   "found_at": "2026-10-26",
    "checked": "10-26",
-   "rank": 17
+   "score": 90,
+   "week": "2026-10-26",
+   "why": "把国内外主流视频平台的链接都接进了同一个转写口。做二创、做课程笔记的人，少装四个工具。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
+   },
+   "dim_total": 9
   },
   {
-   "score": 0.7523,
-   "name": "ATBGamePort",
-   "url": "https://github.com/atbfun/ATBGamePort",
-   "author": "aitobox",
-   "author_url": "https://www.v2ex.com/member/aitobox",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：ATBGamePort -- 用 AI 一键移植任意游戏到 html5",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1250623",
-   "metric_label": "浏览",
-   "metric": 1053,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://github.com/atbfun/ATBGamePort",
-     "metric_label": "浏览",
-     "metric": 1053,
-     "author": "aitobox"
-    }
-   ],
-   "created_at": "2026-10-21",
-   "extra": {
-    "views": 1053,
-    "post": "https://www.v2ex.com/t/1250623",
-    "links": [
-     "https://github.com/atbfun/ATBGamePort",
-     "https://atbfun.github.io/zuma",
-     "https://atbfun.github.io/cutrope",
-     "https://atbfun.github.io/kingdomrush",
-     "https://i.v2ex.co/aNE91ar7.png"
-    ]
+   "name": "FlexChords",
+   "url": "https://flexchords.com",
+   "final_url": "https://www.flexchords.com/",
+   "source_url": "https://news.ycombinator.com/item?id=50163224",
+   "src": "hn",
+   "src_name": "Show HN",
+   "also": [],
+   "author": "amits97",
+   "author_url": "https://news.ycombinator.com/user?id=amits97",
+   "author_type": "individual",
+   "desc": "给任何 YouTube 视频或音频扒吉他和弦，边放边跟着弹。作者自己训的模型。",
+   "title": "FlexChords",
+   "meta": "Get accurate guitar chords for any YouTube video or audio track. Play along in real time with synced chord charts, key and tempo detection, and instant transposition.",
+   "lang": "en",
+   "industry": "内容创作",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
+    "points": 13,
+    "comments": 4
    },
-   "alive": true,
-   "checked": "10-26",
-   "rank": 18
-  },
-  {
-   "score": 0.7491,
-   "name": "edgeever",
-   "url": "https://github.com/tianma-if/edgeever",
-   "author": "mayinshi",
-   "author_url": "https://www.v2ex.com/member/mayinshi",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：EdgeEver：全端开源知识库，支持 Cloudflare / Docker 自托管，原生打通 MCP 与 ACP 联",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1250433",
-   "metric_label": "浏览",
-   "metric": 1022,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://github.com/tianma-if/edgeever",
-     "metric_label": "浏览",
-     "metric": 1022,
-     "author": "mayinshi"
-    }
-   ],
    "created_at": "2026-10-20",
-   "extra": {
-    "views": 1022,
-    "post": "https://www.v2ex.com/t/1250433",
-    "links": [
-     "https://github.com/tianma-if/edgeever",
-     "https://demo.edgeever.org",
-     "https://edgeever.org/install.sh",
-     "https://raw.githubusercontent.com/tianma-if/edgeever/main/assets/readme/edgeever-hero-v6.png",
-     "https://raw.githubusercontent.com/tianma-if/edgeever/main/docs/assets/best-practices/original-image/class-three-pane/image.png"
-    ]
-   },
-   "alive": true,
+   "found_at": "2026-10-26",
    "checked": "10-26",
-   "rank": 19
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "扒谱网站要么靠人工上传，要么收费。这个是一个人自己训的模型直接从音频里听出来，而且跟着视频走。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 2,
+    "wild": 2,
+    "used": 1,
+    "verifiable": 2
+   },
+   "dim_total": 11
   },
   {
-   "score": 0.7466,
-   "name": "Cleanzo",
-   "url": "https://cleanzo.echovic.com",
-   "author": "echoVic",
-   "author_url": "https://www.v2ex.com/member/echoVic",
-   "platforms": [
-    "网页 / 独立应用"
-   ],
-   "desc": "帖：Codex 桌面版的崩溃转储会悄悄吃掉几十上百 GB，查一下你的 Mac",
-   "source": "V2EX 分享创造",
-   "source_url": "https://www.v2ex.com/t/1250986",
-   "metric_label": "浏览",
-   "metric": 999,
-   "sources": [
-    {
-     "src_name": "V2EX 分享创造",
-     "url": "https://cleanzo.echovic.com",
-     "metric_label": "浏览",
-     "metric": 999,
-     "author": "echoVic"
-    }
-   ],
-   "created_at": "2026-10-22",
-   "extra": {
-    "views": 999,
-    "post": "https://www.v2ex.com/t/1250986",
-    "links": [
-     "https://cleanzo.echovic.com",
-     "https://github.com/echoVic/cleanzo"
-    ]
+   "name": "小红书图文排版 Skill（Ian）",
+   "url": "https://ianneo.xyz",
+   "final_url": "",
+   "source_url": "https://github.com/helloianneo/ian-xhs-carousel",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "helloianneo",
+   "author_url": "https://github.com/helloianneo",
+   "author_type": "individual",
+   "desc": "把文章、案例或笔记排成 3:4 的小红书图文：1080×1440，20 个母版，浅色 / 深色。做成了 Claude Code Skill。",
+   "title": "Ian's workspace",
+   "meta": "ian（伊恩），产品设计师，用 AI 做小产品和内容",
+   "lang": "zh",
+   "industry": "设计创意",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
+    "stars": 266,
+    "forks": 20,
+    "topics": [
+     "ai-agent",
+     "carousel",
+     "chinese",
+     "claude-code",
+     "claude-skill",
+     "design",
+     "xiaohongshu"
+    ],
+    "language": "HTML"
    },
-   "alive": true,
+   "created_at": "2026-10-21",
+   "found_at": "2026-10-26",
    "checked": "10-26",
-   "rank": 20
+   "score": 90,
+   "week": "2026-10-26",
+   "why": "在小红书发图文最耗时间的是排版。这个把 20 个母版做成了 AI 能调用的技能，一周 266 个 star 说明真有人在用。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 2,
+    "verifiable": 2
+   },
+   "dim_total": 11
+  },
+  {
+   "name": "Design Style",
+   "url": "https://guanmo-ai.github.io/design-style",
+   "final_url": "https://guanmo-ai.github.io/design-style/",
+   "source_url": "https://github.com/guanmo-ai/design-style",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "guanmo-ai",
+   "author_url": "https://github.com/guanmo-ai",
+   "author_type": "individual",
+   "desc": "每天一个设计风格：15 秒动效短片、风格图解、设计规则、AI 提示词和完整源码，全部开放。",
+   "title": "Design Style",
+   "meta": "用 15 秒短片认识设计风格与布局方式，探索图解、设计规则、AI 提示词与完整源码。",
+   "lang": "zh",
+   "industry": "设计创意",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
+    "stars": 130,
+    "forks": 5,
+    "topics": [],
+    "language": "TypeScript"
+   },
+   "created_at": "2026-10-20",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 90,
+   "week": "2026-10-26",
+   "why": "设计风格参考站很多，带动效短片和能直接跑的源码的没几个。看一个风格 15 秒，想抄就有源码。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 2,
+    "verifiable": 2
+   },
+   "dim_total": 11
+  },
+  {
+   "name": "麦门三路比价器",
+   "url": "https://luck2058.github.io/mcd-trilemma",
+   "final_url": "https://luck2058.github.io/mcd-trilemma/",
+   "source_url": "https://github.com/Luck2058/mcd-trilemma",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "Luck2058",
+   "author_url": "https://github.com/Luck2058",
+   "author_type": "individual",
+   "desc": "同一份麦当劳，外送 / 到店取餐 / 得来速三条路的真实到手价对比，用「临界时薪」把价差折成时间成本，再算清净热量。",
+   "title": "麦门三路比价器",
+   "meta": "同一份麦当劳，外送 / 到店取餐 / 得来速三条路的真实到手价对比。用「临界时薪」把价差折算成时间成本，再算清净热量。",
+   "lang": "zh",
+   "industry": "生活服务",
+   "has_ui": true,
+   "traction": false,
+   "signals": {
+    "stars": 1,
+    "forks": 0,
+    "topics": [
+     "ai-agent",
+     "mcdonalds",
+     "mcp",
+     "python",
+     "skill",
+     "workbuddy"
+    ],
+    "language": "Python"
+   },
+   "created_at": "2026-10-21",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "比价器很多，把「多走这一趟值不值」折成你的时薪来算的，第一次见。一个点餐接口被用出了经济学课的味道。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 2,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
+   },
+   "dim_total": 10
+  },
+  {
+   "name": "McDiff",
+   "url": "https://chendykjx.github.io/mcdiff",
+   "final_url": "https://chendykjx.github.io/mcdiff/",
+   "source_url": "https://github.com/Chendykjx/mcdiff",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "Chendykjx",
+   "author_url": "https://github.com/Chendykjx",
+   "author_type": "individual",
+   "desc": "每天用麦当劳中国 MCP 采一次菜单快照，像 git commit 一样存下来，git diff 出今天谁涨价、谁下架；下架的餐品进「麦门考古博物馆」。",
+   "title": "McDiff",
+   "meta": "McDiff：每天用麦当劳中国 MCP 采集一次门店菜单快照，像 git commit 一样存下来，git diff 出今天谁涨价、谁下架；下架的 SKU 进「麦门考古博物馆」。麦当劳程序员创意开发大赛参赛作品。",
+   "lang": "zh",
+   "industry": "生活服务",
+   "has_ui": true,
+   "traction": false,
+   "signals": {
+    "stars": 2,
+    "forks": 0,
+    "topics": [
+     "agent-skill",
+     "diff",
+     "mcd",
+     "mcdonalds",
+     "mcdonalds-mcp",
+     "mcp",
+     "menu",
+     "python"
+    ],
+    "language": "Python"
+   },
+   "created_at": "2026-10-24",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "把程序员最熟的 git diff 用在了菜单上。涨价和下架这种公司不会主动说的事，被一个人用快照对账对出来了。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 2,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
+   },
+   "dim_total": 10
+  },
+  {
+   "name": "Open Air Workout",
+   "url": "https://openairworkout.com",
+   "final_url": "",
+   "source_url": "https://news.ycombinator.com/item?id=50218188",
+   "src": "hn",
+   "src_name": "Show HN",
+   "also": [],
+   "author": "hunvreus",
+   "author_url": "https://news.ycombinator.com/user?id=hunvreus",
+   "author_type": "individual",
+   "desc": "找你附近和全世界的户外健身场：单杠公园、街健场地、健身步道，一张地图。",
+   "title": "Open Air Workout",
+   "meta": "Find outdoor gyms, calisthenics parks, pull-up bars, and fitness trails near you and around the world.",
+   "lang": "en",
+   "industry": "生活服务",
+   "has_ui": true,
+   "traction": true,
+   "signals": {
+    "points": 4,
+    "comments": 0
+   },
+   "created_at": "2026-10-24",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "健身房地图到处是，专门标户外单杠和街健场地的地图几乎没有。出差到一个城市想练一下，这个有用。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 1,
+    "verifiable": 2
+   },
+   "dim_total": 10
+  },
+  {
+   "name": "萤线",
+   "url": "https://daoyi2026.github.io/firefly-line",
+   "final_url": "https://daoyi2026.github.io/firefly-line/",
+   "source_url": "https://github.com/daoyi2026/firefly-line",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "daoyi2026",
+   "author_url": "https://github.com/daoyi2026",
+   "author_type": "individual",
+   "desc": "你和你的 AI 各牵一根光绳的一头，在毛绒绒的梦境里一起收集萤火虫的双人合作小游戏。",
+   "title": "萤线",
+   "meta": "萤线：你和你的 AI 各牵一根光绳的一头，在毛绒绒的梦境里一起收集萤火虫的双人合作小游戏。",
+   "lang": "zh",
+   "industry": "游戏娱乐",
+   "has_ui": true,
+   "traction": false,
+   "signals": {
+    "stars": 0,
+    "forks": 0,
+    "topics": [
+     "ai",
+     "cooperative",
+     "game",
+     "html5-game"
+    ],
+    "language": "HTML"
+   },
+   "created_at": "2026-10-21",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "AI 在游戏里通常是对手或 NPC，这里它是跟你牵着同一根绳的队友。一个人做的小游戏，但想法是新的。",
+   "dims": {
+    "usable": 2,
+    "specific": 1,
+    "novel": 2,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
+   },
+   "dim_total": 9
+  },
+  {
+   "name": "万物皆可查",
+   "url": "https://mc-ler.github.io/Yuanbao_Search",
+   "final_url": "https://mc-ler.github.io/Yuanbao_Search/",
+   "source_url": "https://github.com/Mc-ler/Yuanbao_Search",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "Mc-ler",
+   "author_url": "https://github.com/Mc-ler",
+   "author_type": "individual",
+   "desc": "输入一句话，自动拆需求、检索、给来源 A–E 分级、去重、出可引用的报告。深度研究和一句话查证两种模式，本地优先。",
+   "title": "万物皆可查",
+   "meta": "万物皆可查：输入一句话，完成需求拆分、SearchPro 检索、来源分级、去重与可引用报告。深度研究与一句话查证双模式。",
+   "lang": "zh",
+   "industry": "科研学术",
+   "has_ui": true,
+   "traction": false,
+   "signals": {
+    "stars": 0,
+    "forks": 0,
+    "topics": [
+     "ai-research",
+     "citations",
+     "deepseek",
+     "evidence",
+     "fact-checking",
+     "fastapi",
+     "github-pages",
+     "llm"
+    ],
+    "language": "HTML"
+   },
+   "created_at": "2026-10-24",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "AI 搜索的问题是来源不分好坏。这个把来源分了五级，每条结论能追到哪一级的来源——是「查证」而不是「生成」。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 1,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
+   },
+   "dim_total": 9
+  },
+  {
+   "name": "机器视觉智能选型助手",
+   "url": "https://549763551.github.io/vision-selector",
+   "final_url": "https://549763551.github.io/vision-selector/",
+   "source_url": "https://github.com/549763551/vision-selector",
+   "src": "github",
+   "src_name": "GitHub 新仓",
+   "also": [],
+   "author": "549763551",
+   "author_url": "https://github.com/549763551",
+   "author_type": "individual",
+   "desc": "输入视野、精度、任务和材质，自动推导工业相机 + 镜头 + 光源方案，每一步算术摊开可复核；内置海康、华睿、Basler、大恒四品牌近千台型号参数库。",
+   "title": "机器视觉智能选型助手",
+   "meta": "输入视野、精度、任务与材质，自动推导机器视觉相机 + 镜头 + 光源方案，并摊开每一步算术供复核。内置海康机器人、华睿、Basler、大恒四品牌 949 台面阵相机、156 支镜头、473 款光源（含华睿），支持跨品牌等价替换、转接环、备选方案与线扫/远心建议。纯前端单页，离线可用。",
+   "lang": "zh",
+   "industry": "工业制造",
+   "has_ui": true,
+   "traction": false,
+   "signals": {
+    "stars": 0,
+    "forks": 0,
+    "topics": [
+     "industrial-camera",
+     "lens-selection",
+     "lighting",
+     "machine-vision",
+     "static-site",
+     "vision-system"
+    ],
+    "language": "JavaScript"
+   },
+   "created_at": "2026-10-21",
+   "found_at": "2026-10-26",
+   "checked": "10-26",
+   "score": 80,
+   "week": "2026-10-26",
+   "why": "工厂里做视觉检测，选相机镜头光源靠销售推荐和老师傅经验。这个把算法和四个品牌的参数库摊在网页上，这是真正的行业工具。",
+   "dims": {
+    "usable": 2,
+    "specific": 2,
+    "novel": 2,
+    "wild": 2,
+    "used": 0,
+    "verifiable": 2
+   },
+   "dim_total": 10
   }
- ],
- "pool": {
-  "skills_candidates": 5661,
-  "skills_groups": 5274,
-  "apps_candidates": 934,
-  "apps_groups": 915,
-  "sources": [
-   "ClawHub",
-   "SkillHub",
-   "V2EX 分享创造",
-   "skills.sh",
-   "扣子商店",
-   "虾评Skill"
-  ]
- },
- "poster_note": "创刊号按累计数值排，下期起主排本周增量。被排到的人可以来认领；没排到的，来投稿。",
- "skills_sub": "独立开发者做的 agent 技能，跨 SkillHub / ClawHub / 虾评Skill / skills.sh 四个市场合并，来源内归一后排",
- "apps_sub": "普通人做出来、搜不到但好用的 AI 应用：扣子商店智能体与应用 + V2EX 分享创造近 30 天 AI 作品，发布当天逐条打开过"
+ ]
 }
